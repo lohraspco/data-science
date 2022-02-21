@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Sun May 23 11:42:28 CDT 2021:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.12.1.1 - (1704137): instance a816c00e-0179-9a1b-4269-000016897718 
+on database directory /home/lohrasp/lohrasp/analyticsoptim/sparkha/metastore_db with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@1e851f59 
+Loaded from file:/opt/spark/jars/derby-10.12.1.1.jar
+java.vendor=Private Build
+java.runtime.version=1.8.0_292-8u292-b10-0ubuntu1~20.04-b10
+user.dir=/home/lohrasp/lohrasp/analyticsoptim/sparkha
+os.name=Linux
+os.arch=amd64
+os.version=5.4.0-73-generic
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
