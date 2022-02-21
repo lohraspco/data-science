@@ -1,6 +1,6 @@
 # My data science and programming practices 
 
-This is Matt Najarian and I have been working on data science and optimization for 4 years. Currently I am a lead data scientists working on IoT project. 
+This is Matt Najarian and I have been working on data science and optimization for 7 years. Currently I am a lead data scientists working on IoT project. 
 
 ## Spark
 As I learned spark, I decided to share what I learned both for my own reference future readers.
