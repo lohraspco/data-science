@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+{% block content %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Stock Screener</title>
+</head>
+
+<body>
+    <form>
+        <select name="pattern">
+            {% for pattern in patterns %}
+            <option value="{{pattern}}">{{patterns[pattern]}}</option>
+            {% endfor %}
+        </select>
+        <select name="symbol">
+            {% for symb in symbols %}
+            <option value="{{symb}}">{{symb}}</option>
+            {% endfor %}
+        </select>
+        <input type="submit" value="scan" />
+    </form>
+    <!-- <ul>
+        {% for item in is_potential %}
+        <li> {{item}} </li>
+        {% endfor %}
+    </ul> -->
+    <div>
+        <table class="ui celled table">
+            <thead>
+                <tr>
+                    {% for col in stockdata.columns %}
+                    <th>{{col}}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for key,value in stockdata.iterrows() %}
+                <tr>
+                    {% for k,v in value.items() %}
+                    {% if v|float != 0 %}
+                    <td>{{ "%.2f" | format(v) }}</td>
+
+                    {% else %}
+                    <td>{{ v }}</td>
+                    {% endif %}
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <!--    {% for key,value in stockdata.iterrows() %}-->
+        <!--        <option value="{{ value['id'] }}">{{ value['text'] }}</option>-->
+        <!--    {% endfor %}-->
+    </div>
+</body>
+
+</html>
+
+{% endblock %}
