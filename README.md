@@ -3,10 +3,10 @@
 This is Matt Najarian and I have been working on data science and optimization for 7 years. Currently I am a lead data scientists working on IoT project. 
 
 One of my hobbies is working with my cluster. I have 3 PCs that I have installed several applications and platforms:
-- Apache SuperSet (visit lohrasp.com)
+- Apache SuperSet (visit [lohrasp.com](http://lohrasp.com/))
 - Hadoop
 - Spark 3
-- The current demo application (visit projects.lohrasp.com)
+- The current demo application (visit [projects.lohrasp.com](http://projects.lohrasp.com/login/))
 ![plot](./media/home_cluster_m_najarian.jpg)
 media/home_cluster_m_najarian.jpg
 
