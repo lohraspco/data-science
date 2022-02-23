@@ -57,3 +57,9 @@ Morningstar Profitability & Growth
 <li>Ichimoku Cloud
 <li>Volatility
 <li>RSI Screen
+
+
+# Links
+https://stock-analysis-engine.readthedocs.io/en/latest/README.html
+
+https://twopirllc.github.io/pandas-ta/
