@@ -16,7 +16,6 @@ One of my hobbies is working with my cluster. I have 3 PCs that I have installed
 - PostgreSQL 14.0 and PgAdmin 4
 
 ![plot](./media/home_cluster_m_najarian.jpg)
-media/home_cluster_m_najarian.jpg
 
 ## Spark
 As I learned spark, I decided to share what I learned both for my own reference future readers.
@@ -24,14 +23,12 @@ As I learned spark, I decided to share what I learned both for my own reference 
 <li>RDD
 <li>DataFrame
 <li>MLIB
+</br>
 
 
 
+![Read more] (/spark_practice/README.md)
 
-some links
-
-https://www.youtube.com/watch?v=639JCua-bQU
-<br>set the .bashrc variables as in https://opensource.com/article/18/11/pyspark-jupyter-notebook
 
 
 ## TensorFlow/Keras
