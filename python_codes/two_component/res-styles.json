@@ -1,0 +1,64 @@
+[ {
+  "format_version" : "1.0",
+  "generated_by" : "cytoscape-3.6.1",
+  "target_cytoscapejs_version" : "~2.1",
+  "title" : "KEGG Style",
+  "style" : [{
+              "selector": "node",
+              "css": {
+                  "border-opacity": 1.0,
+                  "background-opacity": 0.9411764705882353,
+                  "text-valign": "center",
+                  "text-halign": "center",
+                  "shape": "ellipse",
+                  "text-opacity": 1.0,
+                  "font-size": 16,
+                  "border-color": "rgb(0,0,0)",
+                  "border-width": 0.0,
+                  "color": "blue",
+                  "background-color": "yellow",
+                  "content": "data(name)"
+              },
+			  "position":{"x":200,"y":100}
+          }, {
+              "selector": "node[name = 's']",
+              "css": {
+                  "font-size": 20,
+                  "background-color": "green"
+              }
+          }, {
+              "selector": "node[name = 't']",
+              "css": {
+                  "font-size": 20,
+                  "background-color": "green"
+              }
+          },{
+              "selector": "edge",
+              "css": {
+                  "color": "rgb(220,20,60)",
+                  "target-arrow-shape": "triangle",
+                  "line-style": "solid",
+                  "font-family": "HelveticaNeue",
+                  "font-weight": "normal",
+                  "font-size": 16,
+                  "opacity": 0.7058823529411765,
+                  "source-arrow-shape": "none",
+                  "mid-target-arrow-color": "blue",
+                  "mid-target-arrow-shape": "vee",
+                  "target-arrow-color": "rgb(64,64,64)",
+                  "source-arrow-color": "rgb(64,64,64)",
+                  "text-opacity": 1.0,
+                  "width": "data(capacity)",
+                  "line-color": "rgb(64,64,64)",
+                  "content": "data(capacity)",
+				  "font-size": 40
+              }
+          },{
+		     "selector" : "node:selected",
+			 "css" : {"background-color" : "rgb(0,255,0)"}
+		  },{
+		     "selector" : "edge:selected",
+			 "css" : {"line-color" : "rgb(0,255,0)"}
+		  }]
+} ]
+
