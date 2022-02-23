@@ -30,7 +30,10 @@ While I was preparing for Databricks Certified Associate Developer for Apache ex
 ## Links 
 https://medium.com/data-arena/databricks-certified-associate-developer-for-apache-spark-tips-to-get-prepared-for-the-exam-cf947795065b
 
-## Some notes:
+https://www.youtube.com/watch?v=639JCua-bQU
+<br>set the .bashrc variables as in https://opensource.com/article/18/11/pyspark-jupyter-notebook
+
+## My notes:
 
 There are three modes to run Apache Spark Applications:
 </br>
