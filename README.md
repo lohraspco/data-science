@@ -29,7 +29,7 @@ As I learned spark, I decided to share what I learned both for my own reference 
 
 [Read more] (spark_practice/README.md)
 
-<a href="spark_practice/README.m">Read more</a>
+<a href="spark_practice/">Read more</a>
 
 ## TensorFlow/Keras
 
