@@ -26,10 +26,7 @@ As I learned spark, I decided to share what I learned both for my own reference 
 </br>
 
 
-
-[Read more] (spark_practice/README.md)
-
-<a href="spark_practice/">Read more</a>
+<a href="https://github.com/lohraspco/data-science/tree/master/spark_practice/">Read more</a>
 
 ## TensorFlow/Keras
 
