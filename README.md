@@ -27,7 +27,7 @@ As I learned spark, I decided to share what I learned both for my own reference 
 
 
 
-[Read more] (/spark_practice/README.md)
+[Read more] (spark_practice/README.md)
 
 
 
