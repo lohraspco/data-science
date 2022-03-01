@@ -52,13 +52,11 @@ https://www.sciencedirect.com/science/article/abs/pii/S0951832019308336
 </br>
 
 # SQL Tips and Tricks
-
+To be added soon ...
 
 
 ## FastApi codes
+Visit the simple site the I have created using FastApi at http://projects.lohrasp.com/.
 
 
-useful sites 
-https://levelup.gitconnected.com/building-a-website-starter-with-fastapi-92d077092864
-https://github.com/hackingthemarkets/stockscreener
-https://jinja.palletsprojects.com/en/2.9.x/templates/#int
+
