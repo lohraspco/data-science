@@ -12,12 +12,12 @@ One of my hobbies is working with my cluster. I have 3 PCs that I have installed
 - Apache SuperSet (visit [lohrasp.com](http://lohrasp.com/))
 - Hadoop
 - Spark 3
-- The current demo application (visit [projects.lohrasp.com](http://projects.lohrasp.com/login/))
+- The current demo application (visit [projects.lohrasp.com](http://projects.lohrasp.com/))
 - PostgreSQL 14.0 and PgAdmin 4
 
 ![plot](./media/home_cluster_m_najarian.jpg)
 
-## Apache Spark / Databricks
+# Apache Spark / Databricks
 As I learned spark, I decided to share what I learned both for my own reference future readers.
 <li>Spark installation
 <li>RDD
@@ -28,7 +28,10 @@ As I learned spark, I decided to share what I learned both for my own reference 
 
 <a href="https://github.com/lohraspco/data-science/tree/master/spark_practice/">Read more</a>
 
-## TensorFlow/Keras
+# TensorFlow/Keras
+During my Ph.D. studies, with two of my friends we tutored TensorFlow. Check the following links for more information:
+- https://easy-tensorflow.com/
+- https://github.com/easy-tensorflow/easy-tensorflow
 
 </br>
 
@@ -45,6 +48,10 @@ https://www.sciencedirect.com/science/article/abs/pii/S0951832019308336
 
 - <a href="https://github.com/lohraspco/data-science/tree/master/python_codes/component_importance">Component Importance</a>: at the time of recovery from a disaster, some components play a more important. This is an ongoing research of mine to find those components. The codes include cool visualization (<a href="https://cytoscape.org/">Cytoscape</a>) and random graph generation codes.  
 
+
+</br>
+
+# SQL Tips and Tricks
 
 
 
