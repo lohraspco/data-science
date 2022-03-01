@@ -17,7 +17,7 @@ One of my hobbies is working with my cluster. I have 3 PCs that I have installed
 
 ![plot](./media/home_cluster_m_najarian.jpg)
 
-## Spark
+## Apache Spark / Databricks
 As I learned spark, I decided to share what I learned both for my own reference future readers.
 <li>Spark installation
 <li>RDD
@@ -30,9 +30,22 @@ As I learned spark, I decided to share what I learned both for my own reference 
 
 ## TensorFlow/Keras
 
+</br>
 
-## Stock Screeners Should Have
-It is a gathering of some useful tips and sites I found on the internet. 
+# Python Tips and Projects
+
+In in the <a href="https://github.com/lohraspco/data-science/tree/master/python_codes/">python_codes</a> subdirectory, I have included some of my personal and educational projects. Here is a list of items you will find: 
+
+- <a href="https://github.com/lohraspco/data-science/blob/master/python_codes/python_cheat_sheet.ipynb"> Python cheat sheet</a>: I have noted down some tips and tricks while working on different projects which can be useful to you. 
+
+- <a href="https://github.com/lohraspco/data-science/tree/master/python_codes/unit_commitment" style="bold">Security Constrained Unit Commitment</a>: Unit Commitment is the process of turning on (committing) resources to meet load and other market requirements. • Security-Constrained Unit Commitment (SCUC) commits units (electricity generators). while respecting limitations of the transmission system and unit. I have coded it in <a href="https://github.com/lohraspco/data-science/tree/master/Java_and_CPP/unit_commitment_Java">Java</a> and <a href="https://github.com/lohraspco/data-science/tree/master/python_codes/unit_commitment">Python</a>. 
+
+- <a href="https://github.com/lohraspco/data-science/tree/master/python_codes/investment">Maximizing Infrastructure Resiliency Under Budgetary Constraint</a>: it is crucial for investment on resiliency to distribute budget among different resources, in a way that the effect is maximized. Check my paper in the following link:
+https://www.sciencedirect.com/science/article/abs/pii/S0951832019308336
+
+- <a href="https://github.com/lohraspco/data-science/tree/master/python_codes/component_importance">Component Importance</a>: at the time of recovery from a disaster, some components play a more important. This is an ongoing research of mine to find those components. The codes include cool visualization (<a href="https://cytoscape.org/">Cytoscape</a>) and random graph generation codes.  
+
+
 
 
 ## FastApi codes
