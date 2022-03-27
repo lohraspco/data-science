@@ -59,4 +59,36 @@ To be added soon ...
 Visit the simple site the I have created using FastApi at http://projects.lohrasp.com/.
 
 
+Here is a list of useful links that Steve Nouri has shared on his [Twitter](https://www.linkedin.com/in/stevenouri?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAAAj_qcABebPCFHyk-0_-nNFZsxiGnzK5i6c&lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BqMLBp%2FEXQ1e2hvalwm580g%3D%3D&licu=urn%3Ali%3Acontrol%3Ad_flagship3_feed-actor_container&lici=YuWZTkjVPY88%2B%2BlL9xXKFg%3D%3D) account. While I put them here for simplicity of acces, please also read on the Twitter. 
 
+1. All algorithms implemented in Python
+By: The Algorithms
+https://lnkd.in/guaDFtA
+
+2. DataScienceResources
+By: jb
+https://lnkd.in/gfn6GxN
+
+3. Playground and Cheatsheet for Learning Python
+By: Oleksii Trekhleb ( Also the Image)
+https://lnkd.in/gT_QueF
+
+4. Learn Python 3
+By: Jerry Pussinen
+https://lnkd.in/gRm8xYs
+
+5. Awesome Data Science
+By: Fatih Aktürk, Hüseyin Mert & Osman Ungur, Recep Erol.
+https://lnkd.in/g9VRjip
+
+6. data-scientist-roadmap
+By: MrMimic
+https://lnkd.in/gBRwKVw
+
+7. Data Science Best Resources
+By: Tirthajyoti Sarkar
+https://lnkd.in/ghk3yBd
+
+8. Ds-cheatsheets
+By: Favio André Vázquez
+https://lnkd.in/gJHjc5X
