@@ -64,34 +64,18 @@ Visit the simple site the I have created using FastApi at http://projects.lohras
 # Useful Links
 Here is a list of useful links that Steve Nouri has shared on his [Twitter](https://www.linkedin.com/in/stevenouri?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAAAj_qcABebPCFHyk-0_-nNFZsxiGnzK5i6c&lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BqMLBp%2FEXQ1e2hvalwm580g%3D%3D&licu=urn%3Ali%3Acontrol%3Ad_flagship3_feed-actor_container&lici=YuWZTkjVPY88%2B%2BlL9xXKFg%3D%3D) account. While I put them here for simplicity of acces, please also read on the Twitter. 
 
-1. All algorithms implemented in Python
-By: The Algorithms
-https://lnkd.in/guaDFtA
+1. [All algorithms implemented in Python, by: The Algorithms](https://github.com/TheAlgorithms/Python)
 
-2. DataScienceResources
-By: jb
-https://lnkd.in/gfn6GxN
+2. [DataScienceResources, by: jb](https://github.com/jonathan-bower/DataScienceResources)
 
-3. Playground and Cheatsheet for Learning Python
-By: Oleksii Trekhleb ( Also the Image)
-https://lnkd.in/gT_QueF
+3. [Playground and Cheatsheet for Learning Python, by: Oleksii Trekhleb](https://github.com/trekhleb/learn-python)
 
-4. Learn Python 3
-By: Jerry Pussinen
-https://lnkd.in/gRm8xYs
+4. [Learn Python 3, by: Jerry Pussinen](https://github.com/jerry-git/learn-python3)
 
-5. Awesome Data Science
-By: Fatih Aktürk, Hüseyin Mert & Osman Ungur, Recep Erol.
-https://lnkd.in/g9VRjip
+5. [Awesome Data Science, by: Fatih Aktürk, Hüseyin Mert & Osman Ungur, Recep Erol](https://github.com/academic/awesome-datascience)
 
-6. data-scientist-roadmap
-By: MrMimic
-https://lnkd.in/gBRwKVw
+6. [data-scientist-roadmap, by: MrMimic](https://github.com/MrMimic/data-scientist-roadmap)
 
-7. Data Science Best Resources
-By: Tirthajyoti Sarkar
-https://lnkd.in/ghk3yBd
+7. [Data Science Best Resources, by: Tirthajyoti Sarkar](https://github.com/tirthajyoti/Data-science-best-resources/blob/master/README.md)
 
-8. Ds-cheatsheets
-By: Favio André Vázquez
-https://lnkd.in/gJHjc5X
+8. [Ds-cheatsheets, by: Favio André Vázquez](https://github.com/FavioVazquez/ds-cheatsheets)
