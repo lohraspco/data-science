@@ -59,6 +59,9 @@ To be added soon ...
 Visit the simple site the I have created using FastApi at http://projects.lohrasp.com/.
 
 
+</br>
+
+# Useful Links
 Here is a list of useful links that Steve Nouri has shared on his [Twitter](https://www.linkedin.com/in/stevenouri?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAAAj_qcABebPCFHyk-0_-nNFZsxiGnzK5i6c&lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BqMLBp%2FEXQ1e2hvalwm580g%3D%3D&licu=urn%3Ali%3Acontrol%3Ad_flagship3_feed-actor_container&lici=YuWZTkjVPY88%2B%2BlL9xXKFg%3D%3D) account. While I put them here for simplicity of acces, please also read on the Twitter. 
 
 1. All algorithms implemented in Python
