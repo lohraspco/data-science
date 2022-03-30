@@ -9,18 +9,13 @@ under development
     <td colspan="2">Forecasts</td>
   </tr>  
   <td rowspan="2">Actuals</td>
-    <td>TP</td>
-    <td>FN</td>
+    <td>TP (True Positive)</td>
+    <td>FN (False Negative)</td>
   </tr>
   <tr>
-    <td>FP</td>
-    <td>TN</td>
+    <td>FP (False Positive)</td>
+    <td>TN (True Negative)</td>
   </tr>
 </table>
 
-TPR (True Positive Rate)
-<table>
-    <tr>
-        <td>Foo</td>
-    </tr>
-</table>
+TPR (True Positive Rate) = $$TP/P$$
