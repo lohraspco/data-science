@@ -10,10 +10,13 @@ under development
   </tr>  
   <td rowspan="2">Actuals</td>
   <tr>
-    <td>One</td>
-    <td>Two</td>
+    <td>TP</td>
+    <td>FN</td>
   </tr>
-
+  <tr>
+    <td>FP</td>
+    <td>TN</td>
+  </tr>
 </table>
 
 TPR (True Positive Rate)
