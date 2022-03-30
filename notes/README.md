@@ -19,3 +19,4 @@ under development
 </table>
 
 TPR (True Positive Rate) = $$TP/P$$
+<img src="https://render.githubusercontent.com/render/math?math=e^{i \pi} = -1">
