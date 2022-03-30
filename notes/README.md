@@ -9,7 +9,6 @@ under development
     <td colspan="2">Forecasts</td>
   </tr>  
   <td rowspan="2">Actuals</td>
-  <tr>
     <td>TP</td>
     <td>FN</td>
   </tr>
