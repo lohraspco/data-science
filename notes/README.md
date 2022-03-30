@@ -2,11 +2,13 @@ under development
 
 # Accuracy Metrics 
 
+For the confusion matrix below
+</br>
 <table>
  
   <tr>
   <td></td>
-    <td colspan="2">Forecasts</td>
+    <td style='text-align:center' colspan="2">Forecasts</td>
   </tr>  
   <td rowspan="2">Actuals</td>
     <td>TP (True Positive)</td>
@@ -17,6 +19,9 @@ under development
     <td>TN (True Negative)</td>
   </tr>
 </table>
+
+</br>
+here are mostly used accuracy metrics: 
 
 <table>
  
@@ -54,4 +59,4 @@ under development
 <td>acc = (TP+TN)/(P+N)</td>
  </tr>
 </table>
-Coolest formula = <img src="https://render.githubusercontent.com/render/math?math=e^{i \pi} = -1">
+Coolest formula : <img src="https://render.githubusercontent.com/render/math?math=e^{i \pi} = -1">
