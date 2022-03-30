@@ -46,7 +46,7 @@ under development
  </tr>
  <tr>
 <td> Prevalence Threshold</td>
-<td><img src="https://render.githubusercontent.com/render/math?math=sqrt{e^{(TPR(1-TNR))/(TPR-(1-TNR))}"></td>
+<td><img src="https://render.githubusercontent.com/render/math?math=\sqrt{\frac{TPR(1-TNR)-(1-TNR)}{TPR-(1-TNR)}}"></td>
  </tr>
 
   <tr>
