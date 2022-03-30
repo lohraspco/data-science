@@ -3,9 +3,9 @@ under development
 # Accuracy Metrics 
 
 <table>
+ 
   <tr>
-    </tr>  
-  <tr>
+  <td></td>
     <td colspan="2">Forecasts</td>
   </tr>  
   <td rowspan="2">Actuals</td>
