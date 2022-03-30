@@ -79,4 +79,5 @@ Here is a list of useful links that Steve Nouri has shared on his [Twitter](http
 7. [Data Science Best Resources, by: Tirthajyoti Sarkar](https://github.com/tirthajyoti/Data-science-best-resources/blob/master/README.md)
 
 8. [Ds-cheatsheets, by: Favio André Vázquez](https://github.com/FavioVazquez/ds-cheatsheets)
+
 9. [Jupyter, Numpy, Pandas, SKlearn, Keras, and MatplotLib cheatsheets ](https://github.com/lemoz/Cheatsheets)
