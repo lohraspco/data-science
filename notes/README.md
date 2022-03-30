@@ -4,12 +4,16 @@ under development
 
 <table>
   <tr>
+    </tr>  
+  <tr>
+    <td colspan="2">Forecasts</td>
+  </tr>  
+  <td rowspan="2">Actuals</td>
+  <tr>
     <td>One</td>
     <td>Two</td>
   </tr>
-  <tr>
-    <td colspan="2">Three</td>
-  </tr>
+
 </table>
 
 TPR (True Positive Rate)
