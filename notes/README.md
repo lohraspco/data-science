@@ -34,7 +34,7 @@ here are mostly used accuracy metrics:
 <td>TNR = TN/N = 1-FPR whre N=FP+TN </td>
  </tr>
   <tr>
-<td> Positive Predictivity Value, precision/td>
+<td> Positive Predictivity Value, precision</td>
 <td>PPV = TP/(TP+FP) = 1-FDR</td>
  </tr>
   <tr>
