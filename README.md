@@ -52,8 +52,7 @@ https://www.sciencedirect.com/science/article/abs/pii/S0951832019308336
 </br>
 
 # SQL Tips and Tricks
-To be added soon ...
-
+There are some SQL cheatsheet and tips that I added to [SQL](https://github.com/lohraspco/data-science/tree/master/SQL) folder
 
 ## FastApi codes
 Visit the simple site the I have created using FastApi at http://projects.lohrasp.com/.
