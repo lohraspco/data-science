@@ -28,12 +28,12 @@ select date, ticker, open from saffron.daily_price where ticker like 'AB%' order
 
 # Workers With The Highest Salaries
 ## table worker
-|worker_id| int64|
-|first_name| object|
-|last_name| object|
-|salary| int64|
-|joining_date| datetime64[ns]|
-|department| object|
+worker_id: int64
+first_name: object
+last_name: object
+salary: int64
+joining_date: datetime64[ns]
+department: object
 ## table title
 worker_ref_id: int64
 worker_title: object
