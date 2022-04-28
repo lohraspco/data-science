@@ -62,3 +62,16 @@ select user_id, distance from lyft_rides_log order by distance desc limit 10) b
 on  b.user_id = a.id
 order by b.distance desc
 ```
+
+- <details><summary>Detail 1</summary>
+
+     - Detail 1.1
+     - Detail 1.2
+
+- <details><summary>Detail 2</summary>
+
+     - Detail 2.1
+     - Detail 2.2
+
+</details>
+</details>
