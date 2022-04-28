@@ -1,5 +1,6 @@
 {
-    "python.pythonPath": "/home/lohrasp/.msvscode.hdinsight/hdinsightJupyter/bin/python",
+    "python.pythonPath":  "/usr/bin/python3",
+    // "python.pythonPath": "/home/lohrasp/.msvscode.hdinsight/hdinsightJupyter/bin/python",
     "jupyter.jupyterLaunchTimeout": 240000,
     "hdinsightJobSubmission.ClusterConf": [
         {
@@ -10,5 +11,6 @@
             "name": "sparkhadoop: http://192.168.0.233:9000 (lohrasp)",
             "filePath": "/home/lohrasp/lohrasp/analyticsoptim/sparkha/ml_diabetes.py"
         }
-    ]
+    ], 
+      
 }
