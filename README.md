@@ -80,3 +80,6 @@ Here is a list of useful links that Steve Nouri has shared on his [Twitter](http
 8. [Ds-cheatsheets, by: Favio André Vázquez](https://github.com/FavioVazquez/ds-cheatsheets)
 
 9. [Jupyter, Numpy, Pandas, SKlearn, Keras, and MatplotLib cheatsheets ](https://github.com/lemoz/Cheatsheets)
+
+
+10. [SQL](https://www.stratascratch.com/blog/sql-interview-questions-you-must-prepare-the-ultimate-guide/)
