@@ -22,12 +22,22 @@ on t.worker_ref_id = w2.worker_id
 ```
 
 # Distances Traveled
+
+
+
+- <details><summary>Distances Traveled</summary>
 Find the top 10 users that have traveled the greatest distance. Output their id, name and a total distance traveled.
 
-## table lyft_rides_log
-id: int64 user_id: int64 distance: int64
-## table lyft_users
-id: int64 name: object
+     - table lyft_rides_log
+| id    | user\_id | distance |
+| ----- | -------- | -------- |
+| int64 | int64    | int64    |
+
+     - table lyft_users
+| id    | name | 
+| ----- | -------- | 
+| int64 | object    | 
+
 ```sql
 select a.name, b.distance  from  lyft_users a
 inner join (
@@ -36,15 +46,15 @@ on  b.user_id = a.id
 order by b.distance desc
 ```
 
-- <details><summary>Detail 1</summary>
+- <details><summary>3rd Most Reported Health Issues</summary>
 
-     - Detail 1.1
-     - Detail 1.2
 
-- <details><summary>Detail 2</summary>
-
+| activity\_date:  | employee\_id: | facility\_address: | facility\_city: | facility\_id: | facility\_name: | facility\_state: | facility\_zip: | grade: | owner\_id: | owner\_name: | pe\_description: | program\_element\_pe: | program\_name: | program\_status: | record\_id: | score: | serial\_number: | service\_code: | service\_description: |
+| ---------------- | ------------- | ------------------ | --------------- | ------------- | --------------- | ---------------- | -------------- | ------ | ---------- | ------------ | ---------------- | --------------------- | -------------- | ---------------- | ----------- | ------ | --------------- | -------------- | --------------------- |
+| datetime64\[ns\] | object        | object             | object          | object        | object          | object           | object         | object | object     | object       | object           | int64                 | object         | object           | object      | int64  | object          | int64          | object                |
      - Detail 2.1
      - Detail 2.2
+
 
 </details>
 </details>
