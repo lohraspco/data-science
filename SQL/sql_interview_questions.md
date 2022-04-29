@@ -1,13 +1,13 @@
 
-# Workers With The Highest Salaries
-## table worker
+- <details><summary>Workers With The Highest Salaries</summary>
+table worker
 worker_id: int64 
 first_name: object 
 last_name: object 
 salary: int64 
 joining_date: datetime64[ns] 
 department: object 
-## table title
+table title
 worker_ref_id: int64 
 worker_title: object 
 affected_from: datetime64[ns] 
@@ -21,6 +21,8 @@ inner join (
 on t.worker_ref_id = w2.worker_id
 ```
 
+
+</details>
 
 - <details><summary>Distances Traveled</summary>
 Find the top 10 users that have traveled the greatest distance. Output their id, name and a total distance traveled.
