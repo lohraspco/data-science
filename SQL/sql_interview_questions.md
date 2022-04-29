@@ -21,9 +21,6 @@ inner join (
 on t.worker_ref_id = w2.worker_id
 ```
 
-# Distances Traveled
-
-
 
 - <details><summary>Distances Traveled</summary>
 Find the top 10 users that have traveled the greatest distance. Output their id, name and a total distance traveled.
@@ -46,6 +43,7 @@ on  b.user_id = a.id
 order by b.distance desc
 ```
 </details>
+
 - <details><summary>3rd Most Reported Health Issues</summary>
 
 
@@ -54,6 +52,14 @@ order by b.distance desc
 | datetime64\[ns\] | object        | object             | object          | object        | object          | object           | object         | object | object     | object       | object           | int64                 | object         | object           | object      | int64  | object          | int64          | object                |
      - Detail 2.1
      - Detail 2.2
+
+```sql
+select a.name, b.distance  from  lyft_users a
+inner join (
+select user_id, distance from lyft_rides_log order by distance desc limit 10) b
+on  b.user_id = a.id
+order by b.distance desc
+```
 
 
 </details>
