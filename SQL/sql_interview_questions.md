@@ -27,9 +27,9 @@ Find the top 10 users that have traveled the greatest distance. Output their id,
 | int64 | int64    | int64    |
 
      - table lyft_users
-| id    | name | 
-| ----- | -------- | 
-| int64 | object    | 
+| id    | name   |
+| ----- | ------ |
+| int64 | object |
 
 ```sql
 select a.name, b.distance  from  lyft_users a
@@ -60,3 +60,28 @@ order by b.distance desc
 
 </details>
 
+<details><summary>Films with Most Payment</summary>
+Select the films with Most Payment
+
+```sql
+select title from film 
+join
+(  
+     select film_id from inventory 
+     join  
+     (
+          select inventory_id from rental
+          join 
+          (
+               select * from payment 
+               where amount = (select max(amount) from payment)
+          ) maxP 
+ 	     on rental.rental_id = maxP.rental_id
+ 	) maxInv
+     on maxInv.inventory_id = inventory.inventory_id
+) selecte_films
+
+on selecte_films.film_id = film.film_id
+
+```
+</details>
