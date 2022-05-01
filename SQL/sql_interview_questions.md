@@ -1,16 +1,10 @@
 
-- <details><summary>Workers With The Highest Salaries</summary>
-table worker
-worker_id: int64 
-first_name: object 
-last_name: object 
-salary: int64 
-joining_date: datetime64[ns] 
-department: object 
-table title
-worker_ref_id: int64 
-worker_title: object 
-affected_from: datetime64[ns] 
+<details><summary>Workers With The Highest Salaries</summary>
+
+     - table worker
+| worker\_id | first\_name | last\_name | salary | joining\_date    | department | table | worker\_ref\_id | worker\_title | affected\_from   |
+| ---------- | ----------- | ---------- | ------ | ---------------- | ---------- | ----- | --------------- | ------------- | ---------------- |
+| int64      | object      | object     | int64  | datetime64\[ns\] | object     | title | int64           | object        | datetime64\[ns\] |
 
 ```sql
 
@@ -24,7 +18,7 @@ on t.worker_ref_id = w2.worker_id
 
 </details>
 
-- <details><summary>Distances Traveled</summary>
+<details><summary>Distances Traveled</summary>
 Find the top 10 users that have traveled the greatest distance. Output their id, name and a total distance traveled.
 
      - table lyft_rides_log
@@ -46,7 +40,7 @@ order by b.distance desc
 ```
 </details>
 
-- <details><summary>3rd Most Reported Health Issues</summary>
+<details><summary>3rd Most Reported Health Issues</summary>
 
 
 | activity\_date:  | employee\_id: | facility\_address: | facility\_city: | facility\_id: | facility\_name: | facility\_state: | facility\_zip: | grade: | owner\_id: | owner\_name: | pe\_description: | program\_element\_pe: | program\_name: | program\_status: | record\_id: | score: | serial\_number: | service\_code: | service\_description: |
@@ -65,3 +59,4 @@ order by b.distance desc
 
 
 </details>
+
