@@ -1,0 +1,20 @@
+name: experiment_env
+channels:
+  - conda-forge
+dependencies:
+- python=3.9
+- scikit-learn
+- ipykernel
+- matplotlib
+- pandas
+- pip
+- pip:
+  - azureml-defaults
+  - azureml-fsspec
+  - mltable
+  - pyarrow
+  - lightgbm
+  - opencensus-ext-azure>=1.0.1
+  - mlflow
+  - azureml-mlflow
+  - mlflow-skinny
