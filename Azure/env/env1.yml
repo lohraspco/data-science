@@ -1,0 +1,59 @@
+name: env_mlflow_snf_dev
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.10.5
+  - setuptools
+  - joblib
+  - pip
+  - lightgbm
+  - xgboost
+  - pip:
+      - --trusted-host pypi.org
+      - --trusted-host pypi.python.org
+      - --trusted-host files.pythonhosted.org
+      - azureml-core
+      - azureml-pipeline
+      - azureml-sdk
+      - dill
+      - cryptography
+      - llvmlite
+      - ipykernel
+      - ipython
+      - matplotlib-inline
+      - numba
+      - numpy
+      - pyopenssl
+      - pyyaml
+      - pyzmq
+      - scikit-learn
+      - scipy
+      - seaborn
+      - shap
+      - tqdm
+      - azure-storage-blob
+      - pep8
+      - pylint
+      - holidays
+      - python-dateutil
+      - catboost
+      - matplotlib
+      - sqlalchemy
+      - holidays
+      - session_info
+      - statsmodels
+      - optuna
+      - ray
+      - azureml-defaults
+      - azureml-fsspec
+      - mltable
+      - opencensus-ext-azure>
+      - mlflow
+      - https://github.com/wbond/oscrypto/archive/d5f3437ed24257895ae1edd9e503cfb352e635a8.zip
+      - azureml-mlflow
+      - mlflow-skinny
+      - snowflake-connector-python
+      - snowflake-sqlalchemy
+
+prefix: /anaconda/envs/lightspeed_dev
