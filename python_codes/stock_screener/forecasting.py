@@ -5,8 +5,8 @@ import torch.nn as nn
 
 start = "2020-01-01"
 end = "2020-01-03"
-conn = psycopg2.connect(host="slave",
-                        database="postgres",
+conn = psycopg2.connect(host="localhost",
+                        database="stocks",
                         user="postgres",
                         password="reallyStrongPwd123")
 cursor = conn.cursor()

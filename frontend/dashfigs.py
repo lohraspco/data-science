@@ -1,7 +1,5 @@
-import dash_core_components as dcc
-import dash_html_components as html
 import dash
-
+from dash import html, dcc
 import pandas as pd
 
 from database.database_helper import get_stock_data_from_db, get_time_and_symbols

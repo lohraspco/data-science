@@ -9,24 +9,43 @@ import pandas as pd
 import numpy as np
 
 # from frontend.database_sessions import SessionLocal
+import logging
+from colorlog import ColoredFormatter
 
+logger = logging.getLogger(__name__)
+
+# Set logging level and formatter with colors
+colored_formatter = ColoredFormatter(
+    "%(log_color)s%(levelname)-8s%(reset)s %(white)s%(message)s",
+    datefmt=None
+)
+handler = logging.StreamHandler()
+handler.setFormatter(colored_formatter)
+logger.addHandler(handler)
+logger.setLevel(logging.DEBUG)
+
+logger.debug("This is a debug message (blue)")
+logger.info("This is an info message (green)")
+logger.warning("This is a warning message (yellow)")
+logger.error("This is an error message (red)")
 
 def get_pg_cursur():
     conn = psycopg2.connect(
-        host="192.168.0.108",
-        database="postgres",
+        host="192.168.0.208",
+        port=5433,
+        database="stocks",
         user="postgres",
-        password="reallyStrongPwd123")
+        password="StrongPass123")
     curs = conn.cursor()
     return curs
 
 
 def get_time_and_symbols():
     curs = get_pg_cursur()
-    curs.execute("""select ticker from saffron.security where sp500=true""")
+    curs.execute("""select distinct symbol from saffron.magnificent7""")
     symb = curs.fetchall()
     symb = list(chain(*symb))
-    curs.execute("""select max(date)  from saffron.daily_price """)
+    curs.execute("""select max(time)  from saffron.magnificent7 """)
     db_last_date = curs.fetchone()[0]
     db_last_date_next = db_last_date + pd.Timedelta(days=1)
     current_date = datetime.today()
@@ -68,22 +87,28 @@ def get_stock_data_from_db(end, symbs, weeks_back=20, as_dict=True):
     
     start = pd.to_datetime(end) - pd.Timedelta(weeks=weeks_back)
     curs = get_pg_cursur()
+    curs.execute("""
+      SELECT table_name
+      FROM information_schema.tables
+      WHERE table_schema = 'saffron';  -- Modify for your schema name if needed
+    """)
+    logger.info(curs.fetchall())
     query2 = ""
     if isinstance(symbs, str):
-        query2 = f""" SELECT * from saffron."daily_price" where ticker='{symbs}' and date between '{start}' AND '{end}' """
+        query2 = f""" SELECT * from saffron.magnificent7 where symbol='{symbs}' and time between '{start}' AND '{end}' """
     elif isinstance(symbs, list):
         if len(symbs) == 1:
-            query2 = f""" SELECT * from saffron."daily_price" where ticker='{symbs[0]}' and date between '{start}' AND '{end}' """
+            query2 = f""" SELECT * from saffron.magnificent7 where symbol='{symbs[0]}' and time between '{start}' AND '{end}' """
         else:
             symbols = tuple(symbs)
-            query2 = f""" SELECT * from saffron."daily_price" where ticker in {symbols} and date between '{start}' AND '{end}' """
+            query2 = f""" SELECT * from saffron."magnificent7" where symbol in {symbols} and time between '{start}' AND '{end}' """
     else:
         print("The symbols should be either a list or a string")
         return
     df = pd.read_sql_query(query2, con=curs.connection)
     print(symbs, df.shape)
     df_dict = {}
-    df.set_index(["date", "ticker"], inplace=True)
+    df.set_index(["time", "symbol"], inplace=True)
 
     # df = df.unstack()
     return df
