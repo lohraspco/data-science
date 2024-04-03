@@ -49,9 +49,11 @@ uvicorn frontend.app:app
 
 
 
+# nginx
 Configure nginx to make the site live
-###
-sudo nano /etc/nginx/sites-available/lohrasp.com
+
+## sudo nano /etc/nginx/sites-available/lohrasp.com
+
 server {
     listen 80;
     server_name www.lohrasp.com lohrasp.com;
@@ -63,11 +65,16 @@ server {
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     }
 }
-###
+ 
+## create simlink
+## restart nginx
 sudo systemctl restart nginx
 
+# modem config (important)
+configure the modem for port forwarding for both http and https 
 
 configure the modem for port forwarding
+# google domian
 configure the domain DNS record to point to the ip of the host server. 
 udo ln -s /etc/nginx/sites-available/lohrasp.com.conf /etc/nginx/sites-enabled/lohrasp.com.conf
 
@@ -77,6 +84,7 @@ b..d832
 sudo gpasswd -a fastapiuser sudo
 
 
+# install ssl
 sudo certbot --nginx -d lohrasp.com -d www.lohrasp.com
 
 https://portal.databasemart.com/kb/a2134/how-to-install-nginx-with-https-on-ubuntu.aspx
@@ -88,3 +96,6 @@ https://www.youtube.com/watch?v=qlcVx-k-02E
 https://www.ssls.com/knowledgebase/how-to-install-an-ssl-certificate-on-a-nginx-server/
 
 
+
+cat lohrasp_com.crt lohrasp_com.ca-bundle root.crt >> ssl-bundle.crt
+openssl req –new –newkey rsa:2048 –nodes –keyout lohrasp_com.key –out lohrasp_com.csr
