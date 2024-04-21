@@ -99,3 +99,35 @@ https://www.ssls.com/knowledgebase/how-to-install-an-ssl-certificate-on-a-nginx-
 
 cat lohrasp_com.crt lohrasp_com.ca-bundle root.crt >> ssl-bundle.crt
 openssl req –new –newkey rsa:2048 –nodes –keyout lohrasp_com.key –out lohrasp_com.csr
+
+
+
+
+I have added a new system
+
+
+# installing NVIDIA RTXX 3090 TI FE driver
+## Disable X Server
+couldn't disable X server 
+## Install GCC and CC 
+sudo apt install build-essential
+
+## Disbale the Nouveau driver on Ubuntu
+sudo nano /etc/modprobe.d/blacklist-nvidia-nouveau.conf
+
+add 
+blacklist nouveau
+options nouveau modeset=0
+restartGE
+
+
+# Test system
+## install dependencies
+sudo apt install p7zip libopenblas-dev libboost-all-dev gcc g++ cmake libeigen3-dev libfftw3-dev libgflags-dev libhdf5-dev liblapacke-dev libopencv-dev freeglut3-dev libopenmpi-dev libsdl2-dev libsnappy-dev libvulkan-dev zlib1g-dev
+
+sudo apt install ocl-icd-opencl-dev
+sudo apt-get install meson
+sudo apt install nvidia-cuda-toolkit
+
+## running test
+phoronix-test-suite run  pts/nvidia-gpu-compute 

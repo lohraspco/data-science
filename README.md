@@ -8,13 +8,13 @@ Instead of reinventing the wheel, I will refer you to useful links that you may 
 2- https://stanford.edu/~shervine/teaching/
 
 # My personal cluster:
-One of my hobbies is working with my cluster. I have 3 PCs that I have installed several applications and platforms:
+One of my hobbies is working with my cluster. I have 3 normal PCs and one highend PC that I have installed several applications and platforms:
 - Apache SuperSet (visit [lohrasp.com](http://lohrasp.com/))
 - Hadoop
 - Spark 3
 - The current demo application (visit [projects.lohrasp.com](http://projects.lohrasp.com/))
 - PostgreSQL 14.0 and PgAdmin 4
-
+- Cuda
 ![plot](./media/home_cluster_m_najarian.jpg)
 
 # Apache Spark / Databricks
