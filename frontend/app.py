@@ -1,4 +1,6 @@
 import json
+import uvicorn
+
 from datetime import datetime
 import database.database_helper as dbh
 import pandas as pd
@@ -13,7 +15,7 @@ from starlette.middleware.wsgi import WSGIMiddleware
 
 from frontend.router import (cherknevis, dash_graph, dashboard,
                              iris_classifier_router)
-
+from sqlalchemy import create_engine
 from .dashfigs import *
 from .patterns import patterns
 
@@ -86,15 +88,15 @@ def get_db():
 async def home(request: Request, symbols:str = "FB"):
     cursor= dbh.get_pg_cursur()
     engineurl = config()
-    cursor.execute("""
-      SELECT table_name
-      FROM information_schema.tables
-      WHERE table_schema = 'saffron';  -- Modify for your schema name if needed
-    """)
-    logger.error(cursor.fetchall())
-    logger.warning(f"read config {engineurl} (red)")
-    cursor.execute("SELECT distinct symbol FROM saffron.magnificent7")
-    symbols = cursor.fetchall()
+    # cursor.execute("""
+    #   SELECT table_name
+    #   FROM information_schema.tables
+    #   WHERE table_schema = 'saffron';  -- Modify for your schema name if needed
+    # """)
+    # logger.error(cursor.fetchall())
+    # logger.warning(f"read config {engineurl} (red)")
+    # cursor.execute("SELECT distinct symbol FROM saffron.magnificent7")
+    symbols = ["spy", "nvda"]
     symbols = [symbol[0] for symbol in symbols]
 
     print('\033[92m')
@@ -102,14 +104,17 @@ async def home(request: Request, symbols:str = "FB"):
     
     last=datetime.now().strftime("%Y-%m-%d")
     is_potential = ["Ha", "na"]
-    for symb in symbols[20:30]:
-        df =dbh.get_stock_data_from_db(last, symbs=symb)
-        _, _is_potential = dbh.add_bands(df)
-        if _is_potential:
-            is_potential.append(symb)
-    df = dbh.get_stock_data_from_db("2024-02-01", "TSLA")
+    # for symb in symbols[20:30]:
+    #     df =dbh.get_stock_data_from_db(last, symbs=symb)
+    #     _, _is_potential = dbh.add_bands(df)
+    #     if _is_potential:
+    #         is_potential.append(symb)
+    # df = dbh.get_stock_data_from_db("2024-02-01", "spy")
+    engine = create_engine(f"postgresql+psycopg2://admin:lohraspco@localhost:5432/postgres")
+    df = pd.read_sql_query("SELECT * FROM stocks", engine)
+    print(df)
     df.reset_index(inplace=True)
-    df["time"] = df["time"].astype(str)
+    df["date"] = df["date"].astype(str)
     print('\033[0m')
 
     return templates.TemplateResponse("home.html", {"request": request,
@@ -117,3 +122,6 @@ async def home(request: Request, symbols:str = "FB"):
                                                     "symbols":symbols,
                                                     "is_potential": is_potential,
                                                     "stockdata": df.drop(['data_vendor_id','ticker_id'],axis=1,errors='ignore').tail()})
+
+if __name__ == "__main__":
+    uvicorn.run("frontend.app:app", host="0.0.0.0", port=8000, reload=True)

@@ -1,0 +1,67 @@
+Sets 
+    i path /0*58/
+    j edge /e1*e42/;
+
+
+parameter p(i,j) /
+$ondelim offlisting
+$include N17_E42b.csv
+$offdelim  onlisting
+/;
+parameter c(j)/
+$ondelim offlisting
+$include N17_E42_capacity.csv
+$offdelim  onlisting
+/;
+
+parameter
+    k /1/;
+
+nonnegative variables 
+    y(j) 
+    w(j);
+    
+variable   z;
+
+y.lo(j)=0;
+y.up(j) =1;
+
+w.l(j) = 1;
+
+
+equations
+    objective
+    budget
+    pathCapacity(i);
+
+ 
+
+
+objective .. z=e=sum(j, c(j)*(1-y(j))*w(j));
+budget .. sum(j, y(j)) =l=k;
+pathCapacity(i) .. sum(j, p(i,j)*w(j)) =g= 1;
+
+model minmaxxxxx /ALL/;
+minmaxxxxx.reslim= 3600;
+minmaxxxxx.optcr = 0.03;
+option nlp = BARON;
+solve minmaxxxxx using nlp minimizing z;
+
+file result/quadraticResult.csv/;
+RESULT.pc = 5;
+PUT RESULT;
+
+PUT "Objective Function: " , z.L:8:4/;
+PUT "MODEL STATUS: ", minmaxxxxx.modelstat/;
+PUT "SOLVER STATUS: ", minmaxxxxx.SolveStat/;
+
+PUT "VARIABLES: "//;
+PUT "y: "/;
+Loop(j, IF(y.L(j)>0, PUT j.tl , y.L(j) , w.L(j)/;););
+
+
+
+
+
+
+

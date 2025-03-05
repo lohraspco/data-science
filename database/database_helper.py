@@ -31,13 +31,14 @@ logger.error("This is an error message (red)")
 
 def get_pg_cursur():
     conn = psycopg2.connect(
-        host="192.168.0.208",
-        port=5433,
-        database="stocks",
-        user="postgres",
-        password="StrongPass123")
-    curs = conn.cursor()
-    return curs
+        host="localhost",
+        port=5432,
+        database="postgres",
+        user="admin",
+        password="lohraspco")
+    print("connected to database")
+    # curs = conn.cursor()
+    return conn
 
 
 def get_time_and_symbols():

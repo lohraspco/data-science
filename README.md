@@ -1,21 +1,35 @@
-# My data science and programming practices 
+# My data science and programming practices - as of March 2025 
 
-This is Matt Najarian and I have been working on data science and optimization for 7 years. Currently I am a lead data scientists working on IoT projects. 
-I have gathered some notebooks, codes, and notes that I share here; as a reference for myself, and mybe as some guides for visitors.
+Hello, I'm Matt Najarian. With over seven years of experience in data science and optimization, I currently serve as a lead data scientist. My work spans a variety of projects in areas such as machine learning, deep learning, and optimization. This repository is a collection of my notebooks, code, and notes—curated both as a personal reference and as a potential guide for visitors.
 
-Instead of reinventing the wheel, I will refer you to useful links that you may find useful. There are two websites that have useful cheat sheets for data scientist: </br>
-1- https://www.mit.edu/~amidi/teaching/ </br>
-2- https://stanford.edu/~shervine/teaching/
+Instead of reinventing the wheel, I will provide you with links to valuable resources. Here are two websites offering comprehensive cheat sheets for data scientists:
+1. https://www.mit.edu/~amidi/teaching/ </br>
+2. https://stanford.edu/~shervine/teaching/
 
-# My personal cluster:
-One of my hobbies is working with my cluster. I have 3 normal PCs and one highend PC that I have installed several applications and platforms:
-- Apache SuperSet (visit [lohrasp.com](http://lohrasp.com/))
+# My Personal Cluster
+
+One of my hobbies is managing my personal computing cluster. It consists of three standard PCs and one high-end PC, on which I have installed several applications to support my projects and experiments.
+![plot](./media/home_cluster_m_najarian.jpg)
+
+I built my high-end PC using parts sourced from MicroCenter and a used Nvidia RTX 3090 Ti Founders Edition (24 GB) that I purchased for $800. The system is powered by a Ryzen 7 CPU and equipped with 32 GB of RAM (F5-6000J3238F16G).
+
+In this repo, I share some of my experiences in the following ares:
+- [optimization](./optimization/README.md) which contains my optimization model implementations  in Python, Java, and C++.
+- machine learning
+- LLM, RAG, Chatbot (powering by Deepseek running on Ollama)
+- [Apache Spark / Databricks](./apache_spark/README.md)
+- SQL (PostgreSQL 14.0 and PgAdmin 4)
+- NoSQL (Neo4j) 
+- Business Intelligence
+
+
+ and platforms:
+- Apache SuperSet
 - Hadoop
 - Spark 3
-- The current demo application (visit [projects.lohrasp.com](http://projects.lohrasp.com/))
+- The current demo application (will be live soon visit [projects.lohrasp.com](http://projects.lohrasp.com/))
 - PostgreSQL 14.0 and PgAdmin 4
-- Cuda
-![plot](./media/home_cluster_m_najarian.jpg)
+- Apache Airflow
 
 # Apache Spark / Databricks
 As I learned spark, I decided to share what I learned both for my own reference future readers.
