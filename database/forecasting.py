@@ -7,7 +7,7 @@ start = "2020-01-01"
 end = "2020-01-03"
 conn = psycopg2.connect(host="localhost",
                         database="stocks",
-                        port = 5433,
+                        port = 5432,
                         user="postgres",
                         password="reallyStrongPwd123")
 cursor = conn.cursor()
