@@ -112,7 +112,7 @@ async def home(request: Request, symbols:str = "FB"):
     # df = dbh.get_stock_data_from_db("2024-02-01", "spy")
     engine = create_engine(f"postgresql+psycopg2://admin:lohraspco@localhost:5432/postgres")
     df = pd.read_sql_query("SELECT * FROM stocks", engine)
-    print(df)
+    print("read stock successfully")
     df.reset_index(inplace=True)
     df["date"] = df["date"].astype(str)
     print('\033[0m')

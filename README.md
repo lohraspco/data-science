@@ -9,7 +9,10 @@ Instead of reinventing the wheel, I will provide you with links to valuable reso
 # My Personal Cluster
 
 One of my hobbies is managing my personal computing cluster. It consists of three standard PCs and one high-end PC, on which I have installed several applications to support my projects and experiments.
-![plot](./media/home_cluster_m_najarian.jpg)
+<p align="center">
+<img src="./media/eniacw.jpg" alt="Description" width="300" height="300">
+<img src="./media/home_cluster_m_najarian2.jpg" alt="Description" width="500" height="300">
+</p>
 
 I built my high-end PC using parts sourced from MicroCenter and a used Nvidia RTX 3090 Ti Founders Edition (24 GB) that I purchased for $800. The system is powered by a Ryzen 7 CPU and equipped with 32 GB of RAM (F5-6000J3238F16G).
 
