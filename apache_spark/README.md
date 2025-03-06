@@ -51,3 +51,23 @@ https://www.youtube.com/watch?v=639JCua-bQU
 
 ## My notes:
 
+# About Apache  
+Apache Spark: open source data processing engine,  RDDs are the basic data structure within the Apahe Spark.
+- **RDDs**: Immutable, fault-tolerant, distributed datasets for parallel processing.  
+- **Spark vs. MapReduce**: Caches data in memory, reducing replication, serialization, and I/O.  
+
+- **MapReduce**, a programming model for “chunking” a large data processing task into smaller parallel tasks.
+Spark was developed to address shortcomings in MapReduce.
+
+Key Concepts of Spark Core
+1. **RDD** Operations on RDDs fall into:
+- **Transformations** (e.g., map, filter) that create a new RDD.
+- **Actions** (e.g., count, collect) that compute results or write data.
+Lazy Evaluation: Transformations on RDDs are not executed immediately but are "lazy," meaning computation is only triggered when an action is called.
+2. **Distributed Computing**
+3. **Cluster Management**: It integrates with cluster managers like Apache Hadoop YARN, Apache Mesos, or its own built-in Spark Standalone cluster manager to handle resource allocation.
+
+Use Cases for Spark Core
+Log processing: Analyze web server logs for patterns or errors.
+Batch data processing: Process large datasets quickly (e.g., ETL workflows).
+Iterative computations: Run algorithms that repeatedly process the same data (e.g., PageRank).

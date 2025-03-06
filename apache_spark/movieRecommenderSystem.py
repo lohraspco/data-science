@@ -10,8 +10,21 @@ import sys
 # SparkFiles.get("movie_helper.py")
 # sys.path.insert(0,SparkFiles.getRootDirectory())
 
-spark = SparkSession.builder.appName("movieslarge").getOrCreate()
-spark.sparkContext.addPyFile('hdfs:///user/hadoop/movie_helper.py')
+# spark = SparkSession.builder.appName("movieslarge").getOrCreate()
+spark = (
+    SparkSession.builder.appName("movieslarge")
+    .master("spark://localhost:7067") # Spark stand alone
+    # .master("local[*]") # if runnung local
+    # .master("yarn")
+    # .master("mesos://<mesos-master-url>")
+
+    .config("spark.driver.host", "10.0.0.177")
+    # .config("spark.executor.memory", "2g")
+    # .config("spark.driver.memory", "2g")
+    .getOrCreate()
+)
+sc =spark.sparkContext
+sc.addPyFile('movie_helper.py')
 from movie_helper import *
 
 df = DataModel(spark)
