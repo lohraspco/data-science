@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="page-header">
+    <h1><i class="user circle icon"></i> About Me</h1>
+    <p>Passionate Data Scientist & AI Engineer</p>
+</div>
+
+<div class="projects">
+    <div class="projects-header">
+        <h1>My Projects</h1>
+        <p>A collection of my work in AI and Data Science</p>
+    </div>
+
+    <div class="projects-grid">
+        <div class="project-card">
+            <img src="/static/images/project1.jpg" alt="LLM Project">
+            <div class="project-content">
+                <h2>LLM Development</h2>
+                <p>Built a custom language model using transformer architecture for specific domain tasks.</p>
+                <div class="project-tags">
+                    <span class="tag"><i class="python icon"></i> Python</span>
+                    <span class="tag"><i class="brain icon"></i> Deep Learning</span>
+                    <span class="tag"><i class="server icon"></i> FastAPI</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/yourusername/llm-project" target="_blank" class="github-link">
+                        <i class="github icon"></i> GitHub
+                    </a>
+                    <a href="https://demo-llm-project.herokuapp.com" target="_blank" class="demo-link">
+                        <i class="external alternate icon"></i> Live Demo
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <img src="/static/images/project2.jpg" alt="RAG System">
+            <div class="project-content">
+                <h2>RAG System</h2>
+                <p>Developed a Retrieval-Augmented Generation system for accurate information retrieval and response generation.</p>
+                <div class="project-tags">
+                    <span class="tag"><i class="python icon"></i> Python</span>
+                    <span class="tag"><i class="database icon"></i> Vector DB</span>
+                    <span class="tag"><i class="search icon"></i> Semantic Search</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/yourusername/rag-system" target="_blank" class="github-link">
+                        <i class="github icon"></i> GitHub
+                    </a>
+                    <a href="https://demo-rag-system.herokuapp.com" target="_blank" class="demo-link">
+                        <i class="external alternate icon"></i> Live Demo
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <img src="/static/images/project3.jpg" alt="Time Series">
+            <div class="project-content">
+                <h2>Time Series Forecasting</h2>
+                <p>Created a robust time series forecasting system using advanced statistical models and deep learning.</p>
+                <div class="project-tags">
+                    <span class="tag"><i class="python icon"></i> Python</span>
+                    <span class="tag"><i class="chart line icon"></i> Time Series</span>
+                    <span class="tag"><i class="chart bar icon"></i> Data Analysis</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/yourusername/time-series" target="_blank" class="github-link">
+                        <i class="github icon"></i> GitHub
+                    </a>
+                    <a href="https://demo-time-series.herokuapp.com" target="_blank" class="demo-link">
+                        <i class="external alternate icon"></i> Live Demo
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %} 

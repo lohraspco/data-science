@@ -1,3 +1,4 @@
+To spin an Apache Spark docker container use the docker-compose.yml file.
 # Apache Spark
 While I was preparing for Databricks Certified Associate Developer for Apache exam, I found some information and links. Here are some of list of topics assessed in the exam by each category and some links:
 ## Spark Architecture — Conceptual

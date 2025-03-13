@@ -1,0 +1,490 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+/* Navigation */
+.navbar {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-links {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.nav-links a:hover {
+    color: #1a237e;
+}
+
+.nav-links a i {
+    font-size: 1.2rem;
+}
+
+/* Content Container */
+.content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Page Headers */
+.page-header {
+    text-align: center;
+    margin-bottom: 4rem;
+    padding: 2rem 0;
+    background: linear-gradient(135deg, #1a237e 0%, #0d47a1 100%);
+    color: white;
+    border-radius: 10px;
+}
+
+.page-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.page-header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* About Page */
+.about-section {
+    background: #fff;
+    padding: 3rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    margin-bottom: 4rem;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.about-text h2 {
+    color: #1a237e;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+/* Education and Experience Sections */
+.education-grid,
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.education-item,
+.experience-item {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.education-item:hover,
+.experience-item:hover {
+    transform: translateY(-5px);
+}
+
+.education-item h3,
+.experience-item h3 {
+    color: #1a237e;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.education-item p,
+.experience-item p {
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.experience-item ul {
+    margin-top: 1rem;
+    padding-left: 1.5rem;
+}
+
+.experience-item li {
+    color: #666;
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+.key-points {
+    display: grid;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.point {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.1rem;
+    color: #333;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.point:hover {
+    transform: translateX(5px);
+}
+
+.point i {
+    color: #1a237e;
+    font-size: 1.5rem;
+}
+
+/* Projects Page */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.project-card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-content {
+    padding: 2rem;
+}
+
+.project-content h3 {
+    color: #1a237e;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.project-content p {
+    color: #666;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.tag {
+    background: #f0f0f0;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    color: #666;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.tag i {
+    color: #1a237e;
+}
+
+.project-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.project-links a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #1a237e;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.project-links a:hover {
+    color: #0d47a1;
+}
+
+/* Skills Page */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.skill-category {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.skill-category h2 {
+    color: #1a237e;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.skill-item {
+    margin-bottom: 1.5rem;
+}
+
+.skill-name {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.progress-bar {
+    height: 8px;
+    background: #f0f0f0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background: linear-gradient(90deg, #1a237e 0%, #0d47a1 100%);
+    border-radius: 4px;
+    transition: width 0.3s ease;
+}
+
+/* Contact Page */
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.contact-info {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.info-item i {
+    font-size: 1.5rem;
+    color: #1a237e;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #1a237e;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    padding: 0.5rem 1rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.social-links a:hover {
+    color: #0d47a1;
+    background: #f0f0f0;
+}
+
+.contact-form {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #1a237e;
+}
+
+.form-group textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.submit-btn {
+    background: linear-gradient(135deg, #1a237e 0%, #0d47a1 100%);
+    color: #fff;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+}
+
+/* CTA Buttons */
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.cta-buttons .submit-btn {
+    min-width: 200px;
+    justify-content: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .content {
+        padding: 1rem;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .about-grid,
+    .contact-content {
+        grid-template-columns: 1fr;
+    }
+
+    .about-image {
+        order: -1;
+    }
+
+    .about-image img {
+        max-width: 300px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .page-header {
+        padding: 1.5rem;
+    }
+
+    .page-header h1 {
+        font-size: 2rem;
+    }
+
+    .education-grid,
+    .experience-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .point {
+        padding: 0.75rem;
+    }
+
+    .cta-buttons {
+        margin-top: 1.5rem;
+    }
+
+    .cta-buttons .submit-btn {
+        width: 100%;
+    }
+} 

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.7/dist/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="/"><i class="home icon"></i>about</a>
+            <!-- <a href="/about"><i class="user icon"></i>About</a> -->
+            <a href="/projects"><i class="code icon"></i>Projects</a>
+            <a href="/skills"><i class="brain icon"></i>Skills</a>
+            <a href="/contact"><i class="envelope icon"></i>Contact</a>
+        </div>
+    </nav>
+
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+
+    {% block scripts %}{% endblock %}
+</body>
+</html> 

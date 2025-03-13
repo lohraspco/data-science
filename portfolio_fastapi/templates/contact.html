@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="page-header">
+    <h1><i class="user circle icon"></i> About Me</h1>
+    <p>Passionate Data Scientist & AI Engineer</p>
+</div>
+
+<div class="contact">
+    <div class="contact-header">
+        <h1>Get in Touch</h1>
+        <p>I'd love to hear from you! Feel free to reach out.</p>
+    </div>
+
+    <div class="contact-content">
+        <div class="contact-info">
+            <div class="info-item">
+                <i class="envelope icon"></i>
+                <p>Email: send me message in linkedin</p>
+            </div>
+            <div class="info-item">
+                <i class="phone icon"></i>
+                <p>Phone: </p>
+            </div>
+            <div class="info-item">
+                <i class="map marker alternate icon"></i>
+                <p>Location: USA</p>
+            </div>
+            <div class="social-links">
+                <a href="https://github.com/yourusername" target="_blank">
+                    <i class="github icon"></i>
+                </a>
+                <a href="https://linkedin.com/in/yourusername" target="_blank">
+                    <i class="linkedin icon"></i>
+                </a>
+                <a href="https://twitter.com/yourusername" target="_blank">
+                    <i class="twitter icon"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="contact-form">
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">
+                    <i class="paper plane icon"></i> Send Message
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    document.getElementById('contactForm').addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const formData = new FormData(e.target);
+        try {
+            const response = await fetch('/api/contact', {
+                method: 'POST',
+                body: formData
+            });
+            if (response.ok) {
+                alert('Message sent successfully!');
+                e.target.reset();
+            } else {
+                alert('Failed to send message. Please try again.');
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            alert('An error occurred. Please try again.');
+        }
+    });
+</script>
+{% endblock %} 
