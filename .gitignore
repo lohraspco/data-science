@@ -3,3 +3,5 @@ SQL/la_restaurants.csv
 */__pycache__/*
 */*/__pycache__/*
 data_local
+apache_spark/spark_events
+apache_spark/data/
