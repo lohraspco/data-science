@@ -11,6 +11,10 @@
             "name": "sparkhadoop: http://192.168.0.233:9000 (lohrasp)",
             "filePath": "/home/lohrasp/lohrasp/analyticsoptim/sparkha/ml_diabetes.py"
         }
-    ], 
+    ],
+    "files.watcherExclude": {
+        "**/target": true
+    },
+    
       
 }

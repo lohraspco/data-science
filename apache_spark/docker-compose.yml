@@ -1,5 +1,9 @@
 version: '3'
 
+networks:
+  big-data-network:
+    driver: bridge
+
 services:
   zookeeper:
     image: bitnami/zookeeper:latest
@@ -8,117 +12,100 @@ services:
       - "2181:2181"
     environment:
       - ALLOW_ANONYMOUS_LOGIN=yes
+    networks:
+      - big-data-network
     volumes:
       - zookeeper_data:/bitnami/zookeeper
-    networks:
-      - spark-hadoop-net
 
-  namenode:
+  hadoop-namenode:
     image: bde2020/hadoop-namenode:2.0.0-hadoop3.2.1-java8
-    container_name: namenode
+    container_name: hadoop-namenode
     ports:
       - "9870:9870"
       - "9000:9000"
     environment:
       - CLUSTER_NAME=hadoop-cluster
-      - CORE_CONF_fs_defaultFS=hdfs://namenode:9000
+      - CORE_CONF_fs_defaultFS=hdfs://hadoop-namenode:9000
     volumes:
-      - hadoop_namenode:/hadoop/dfs/name
+      - hadoop_namenode_data:/hadoop/dfs/name
     networks:
-      - spark-hadoop-net
+      - big-data-network
     depends_on:
       - zookeeper
 
-  datanode:
+  hadoop-datanode:
     image: bde2020/hadoop-datanode:2.0.0-hadoop3.2.1-java8
-    container_name: datanode
-    depends_on:
-      - namenode
+    container_name: hadoop-datanode
     environment:
-      - CORE_CONF_fs_defaultFS=hdfs://namenode:9000
-      - SERVICE_PRECONDITION=namenode:9870
+      - CORE_CONF_fs_defaultFS=hdfs://hadoop-namenode:9000
+      - SERVICE_PRECONDITION=hadoop-namenode:9000
     volumes:
-      - hadoop_datanode:/hadoop/dfs/data
+      - hadoop_datanode_data:/hadoop/dfs/data
     networks:
-      - spark-hadoop-net
-
-  resourcemanager:
-    image: bde2020/hadoop-resourcemanager:2.0.0-hadoop3.2.1-java8
-    container_name: resourcemanager
-    ports:
-      - "8088:8088"
-    environment:
-      - CORE_CONF_fs_defaultFS=hdfs://namenode:9000
-      - YARN_CONF_yarn_resourcemanager_hostname=resourcemanager
-      - SERVICE_PRECONDITION=namenode:9000 namenode:9870 datanode:9864
-    networks:
-      - spark-hadoop-net
+      - big-data-network
     depends_on:
-      - namenode
-      - datanode
-
-  nodemanager:
-    image: bde2020/hadoop-nodemanager:2.0.0-hadoop3.2.1-java8
-    container_name: nodemanager
-    environment:
-      - CORE_CONF_fs_defaultFS=hdfs://namenode:9000
-      - YARN_CONF_yarn_resourcemanager_hostname=resourcemanager
-      - SERVICE_PRECONDITION=resourcemanager:8088
-    networks:
-      - spark-hadoop-net
-    depends_on:
-      - resourcemanager
+      - hadoop-namenode
 
   spark-master:
-    image: bde2020/spark-master:3.3.0-hadoop3.3
+    image: bitnami/spark:latest
     container_name: spark-master
     ports:
       - "8080:8080"
       - "7077:7077"
+      - "4040:4040"
     environment:
-      - CORE_CONF_fs_defaultFS=hdfs://namenode:9000
-      - SPARK_CONF_spark_eventLog_enabled=true
-      - SPARK_CONF_spark_eventLog_dir=hdfs://namenode:9000/spark-logs
-      - SPARK_CONF_spark_dynamicAllocation_enabled=true
-      - SPARK_CONF_spark_shuffle_service_enabled=true
+      - SPARK_MODE=master
+      - SPARK_RPC_AUTHENTICATION_ENABLED=no
+      - SPARK_RPC_ENCRYPTION_ENABLED=no
+      - SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED=no
+      - SPARK_SSL_ENABLED=no
+      - SPARK_MASTER_HOST=spark-master
     networks:
-      - spark-hadoop-net
-    depends_on:
-      - namenode
-      - datanode
-      - resourcemanager
+      - big-data-network
+    volumes:
+      - spark_data:/bitnami
 
   spark-worker:
-    image: bde2020/spark-worker:3.3.0-hadoop3.3
+    image: bitnami/spark:latest
     container_name: spark-worker
+    ports:
+      - "8081:8081"
     environment:
-      - SPARK_MASTER=spark://spark-master:7077
-      - CORE_CONF_fs_defaultFS=hdfs://namenode:9000
+      - SPARK_MODE=worker
+      - SPARK_MASTER_URL=spark://spark-master:7077
       - SPARK_WORKER_CORES=2
       - SPARK_WORKER_MEMORY=2g
+      - SPARK_DRIVER_MEMORY=1g
+      - SPARK_EXECUTOR_MEMORY=1g
+      - SPARK_RPC_AUTHENTICATION_ENABLED=no
+      - SPARK_RPC_ENCRYPTION_ENABLED=no
+      - SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED=no
+      - SPARK_SSL_ENABLED=no
     networks:
-      - spark-hadoop-net
+      - big-data-network
     depends_on:
       - spark-master
+    volumes:
+      - spark_worker_data:/bitnami
 
-  spark-history-server:
-    image: bde2020/spark-history-server:3.3.0-hadoop3.3
-    container_name: spark-history-server
+  jupyter:
+    image: jupyter/pyspark-notebook:latest
+    container_name: jupyter
     ports:
-      - "18080:18080"
+      - "8888:8888"
     environment:
-      - SPARK_HISTORY_OPTS=-Dspark.history.fs.logDirectory=hdfs://namenode:9000/spark-logs
+      - SPARK_MASTER=spark://spark-master:7077
     networks:
-      - spark-hadoop-net
+      - big-data-network
     depends_on:
       - spark-master
-      - namenode
-
-networks:
-  spark-hadoop-net:
-    driver: bridge
+    volumes:
+      - jupyter_data:/home/jovyan/work
 
 volumes:
-  hadoop_namenode:
-  hadoop_datanode:
   zookeeper_data:
+  hadoop_namenode_data:
+  hadoop_datanode_data:
+  spark_data:
+  spark_worker_data:
+  jupyter_data:
