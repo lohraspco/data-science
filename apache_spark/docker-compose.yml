@@ -1,111 +1,57 @@
-version: '3'
-
-networks:
-  big-data-network:
-    driver: bridge
 
 services:
-  zookeeper:
-    image: bitnami/zookeeper:latest
-    container_name: zookeeper
-    ports:
-      - "2181:2181"
-    environment:
-      - ALLOW_ANONYMOUS_LOGIN=yes
-    networks:
-      - big-data-network
-    volumes:
-      - zookeeper_data:/bitnami/zookeeper
-
-  hadoop-namenode:
-    image: bde2020/hadoop-namenode:2.0.0-hadoop3.2.1-java8
-    container_name: hadoop-namenode
-    ports:
-      - "9870:9870"
-      - "9000:9000"
-    environment:
-      - CLUSTER_NAME=hadoop-cluster
-      - CORE_CONF_fs_defaultFS=hdfs://hadoop-namenode:9000
-    volumes:
-      - hadoop_namenode_data:/hadoop/dfs/name
-    networks:
-      - big-data-network
-    depends_on:
-      - zookeeper
-
-  hadoop-datanode:
-    image: bde2020/hadoop-datanode:2.0.0-hadoop3.2.1-java8
-    container_name: hadoop-datanode
-    environment:
-      - CORE_CONF_fs_defaultFS=hdfs://hadoop-namenode:9000
-      - SERVICE_PRECONDITION=hadoop-namenode:9000
-    volumes:
-      - hadoop_datanode_data:/hadoop/dfs/data
-    networks:
-      - big-data-network
-    depends_on:
-      - hadoop-namenode
-
   spark-master:
     image: bitnami/spark:latest
-    container_name: spark-master
-    ports:
-      - "8080:8080"
-      - "7077:7077"
-      - "4040:4040"
     environment:
       - SPARK_MODE=master
       - SPARK_RPC_AUTHENTICATION_ENABLED=no
       - SPARK_RPC_ENCRYPTION_ENABLED=no
       - SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED=no
       - SPARK_SSL_ENABLED=no
-      - SPARK_MASTER_HOST=spark-master
-    networks:
-      - big-data-network
-    volumes:
-      - spark_data:/bitnami
-
-  spark-worker:
-    image: bitnami/spark:latest
-    container_name: spark-worker
     ports:
-      - "8081:8081"
+      - "8080:8080"  # Web UI
+      - "7077:7077"  # Spark master port
+    volumes:
+      - ./data:/data
+    networks:
+      - spark-network
+
+  spark-worker-1:
+    image: bitnami/spark:latest
     environment:
       - SPARK_MODE=worker
       - SPARK_MASTER_URL=spark://spark-master:7077
+      - SPARK_WORKER_MEMORY=2G
       - SPARK_WORKER_CORES=2
-      - SPARK_WORKER_MEMORY=2g
-      - SPARK_DRIVER_MEMORY=1g
-      - SPARK_EXECUTOR_MEMORY=1g
       - SPARK_RPC_AUTHENTICATION_ENABLED=no
       - SPARK_RPC_ENCRYPTION_ENABLED=no
       - SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED=no
       - SPARK_SSL_ENABLED=no
-    networks:
-      - big-data-network
+    volumes:
+      - ./data:/data
     depends_on:
       - spark-master
-    volumes:
-      - spark_worker_data:/bitnami
+    networks:
+      - spark-network
 
-  jupyter:
-    image: jupyter/pyspark-notebook:latest
-    container_name: jupyter
-    ports:
-      - "8888:8888"
+  spark-worker-2:
+    image: bitnami/spark:latest
     environment:
-      - SPARK_MASTER=spark://spark-master:7077
-    networks:
-      - big-data-network
+      - SPARK_MODE=worker
+      - SPARK_MASTER_URL=spark://spark-master:7077
+      - SPARK_WORKER_MEMORY=2G
+      - SPARK_WORKER_CORES=2
+      - SPARK_RPC_AUTHENTICATION_ENABLED=no
+      - SPARK_RPC_ENCRYPTION_ENABLED=no
+      - SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED=no
+      - SPARK_SSL_ENABLED=no
+    volumes:
+      - ./data:/data
     depends_on:
       - spark-master
-    volumes:
-      - jupyter_data:/home/jovyan/work
+    networks:
+      - spark-network
 
-volumes:
-  zookeeper_data:
-  hadoop_namenode_data:
-  hadoop_datanode_data:
-  spark_data:
-  spark_worker_data:
-  jupyter_data:
+networks:
+  spark-network:
+    driver: bridge
