@@ -1,22 +1,6 @@
-To spin an Apache Spark docker container use the docker-compose.yml file. The structure is as follows:
-- Hadoop:
-  - HDFS (Hadoop Distributed File System): Stores data across the cluster. We'll need a NameNode (the master that manages the file system) and DataNodes (the workers that store the data).
-  - YARN (Yet Another Resource Negotiator): Manages cluster resources and schedules applications. We'll need a ResourceManager (the master) and NodeManagers (the workers).
-- Spark:
-  - Spark Master: The coordinator for Spark applications, similar to the YARN ResourceManager.
-  - Spark Worker: Executes tasks for Spark applications.
-- ZooKeeper: a distributed coordination service that manages configuration, naming, and synchronization (should be used for High Availability of the NameNode and ResourceManager in a production-like setup.)
-# Hadoop
-Hadoop follows a distributed computing model and consists of four main components:
+ To spin an Apache Spark docker container use the docker-compose.yml file. 
+ I tried several setups, like using Zookeeper, Hadoop, and Spark and other configs for two days till I got to the final docker-compsoe.yml in this folder. 
 
-1. Hadoop Distributed File System (HDFS) – A fault-tolerant, distributed file system that stores large datasets across multiple nodes in a cluster. It has:
-  - NameNode (Master) – Manages metadata and file structure.
-  - DataNodes (Workers) – Store and retrieve actual data.
-2. MapReduce – A processing framework that splits data into smaller tasks and processes them in parallel across the cluster using:
-  - Map Phase – Splits and processes data.
-  - Reduce Phase – Aggregates and finalizes results.
-3. YARN (Yet Another Resource Negotiator) – Manages cluster resources and job scheduling.
-4. Hadoop Common – A set of shared utilities and libraries used by other Hadoop modules.
 # Apache Spark
 While I was preparing for Databricks Certified Associate Developer for Apache exam, I found some information and links. Here are some of list of topics assessed in the exam by each category and some links:
 ## Spark Architecture — Conceptual
@@ -90,3 +74,37 @@ Use Cases for Spark Core
 Log processing: Analyze web server logs for patterns or errors.
 Batch data processing: Process large datasets quickly (e.g., ETL workflows).
 Iterative computations: Run algorithms that repeatedly process the same data (e.g., PageRank).
+
+
+After struggle with driver in local, I decided to move forward with having the driver is in spark-master
+Here is the process: 
+docker exec -it apache_spark-spark-master-1 bash
+ pip install jupyterlab pyspark
+/opt/bitnami/python/bin/python3 -m jupyterlab --ip=0.0.0.0 --port=8888 --no-browser --allow-root --user=<username>
+since in the docker-compose.yml we have set port forwarding for 8888 we can open the jupyter lab in local. 
+In vscode we open an ipynb file then we will choose existing **Existing Jupyter Server**
+
+
+
+
+
+
+About the setting with Zookeeper, Hadoop, and Apache Spark 
+- Hadoop:
+  - HDFS (Hadoop Distributed File System): Stores data across the cluster. We'll need a NameNode (the master that manages the file system) and DataNodes (the workers that store the data).
+  - YARN (Yet Another Resource Negotiator): Manages cluster resources and schedules applications. We'll need a ResourceManager (the master) and NodeManagers (the workers).
+- Spark:
+  - Spark Master: The coordinator for Spark applications, similar to the YARN ResourceManager.
+  - Spark Worker: Executes tasks for Spark applications.
+- ZooKeeper: a distributed coordination service that manages configuration, naming, and synchronization (should be used for High Availability of the NameNode and ResourceManager in a production-like setup.)
+# Hadoop
+Hadoop follows a distributed computing model and consists of four main components:
+
+1. Hadoop Distributed File System (HDFS) – A fault-tolerant, distributed file system that stores large datasets across multiple nodes in a cluster. It has:
+  - NameNode (Master) – Manages metadata and file structure.
+  - DataNodes (Workers) – Store and retrieve actual data.
+2. MapReduce – A processing framework that splits data into smaller tasks and processes them in parallel across the cluster using:
+  - Map Phase – Splits and processes data.
+  - Reduce Phase – Aggregates and finalizes results.
+3. YARN (Yet Another Resource Negotiator) – Manages cluster resources and job scheduling.
+4. Hadoop Common – A set of shared utilities and libraries used by other Hadoop modules.
