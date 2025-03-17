@@ -5,3 +5,9 @@ SQL/la_restaurants.csv
 data_local
 apache_spark/spark_events
 apache_spark/data/
+apache_spark/spark_work
+apache_spark/volumes/
+apache_spark/hadoop_namenode_data
+apache_spark/spark-events/
+apache_spark/notebooks/
+apache_spark/.ipynb_checkpoints/
