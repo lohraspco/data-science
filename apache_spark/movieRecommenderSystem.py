@@ -13,7 +13,7 @@ import sys
 # spark = SparkSession.builder.appName("movieslarge").getOrCreate()
 spark = (
     SparkSession.builder.appName("movieslarge")
-    .master("spark://localhost:7067") # Spark stand alone
+    .master("spark://spark-master:7067") # Spark stand alone
     # .master("local[*]") # if runnung local
     # .master("yarn")
     # .master("mesos://<mesos-master-url>")
@@ -25,7 +25,7 @@ spark = (
 )
 sc =spark.sparkContext
 sc.addPyFile('movie_helper.py')
-from movie_helper import *
+from apache_spark.data.movie_helper import *
 
 df = DataModel(spark)
 df_pairs = df.rating.alias("df1").join(df.rating.alias("df2")).\
