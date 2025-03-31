@@ -1,3 +1,6 @@
+"""
+Recommender systems like collaborative filtering (CF), often use similarity measures to compare users or items
+"""
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import col
 import pyspark.sql.functions as func
@@ -38,6 +41,8 @@ df_pairs = df.rating.alias("df1").join(df.rating.alias("df2")).\
 df_pairs2 = df_pairs.withColumn("x_sq", col("rating1")*col("rating1")).\
     withColumn("y_sq", col("rating2")*col("rating2")).\
     withColumn("xy",col("rating1")*col("rating2"))
+
+# Calculate similarity between movies using cosine similarity
 df_sim_helper = df_pairs2.groupBy("movie1","movie2").\
     agg(func.sum(col("xy")).alias("numerator"),\
         func.sqrt( func.sum(col("x_sq")) *func.sum(col("y_sq"))).alias("denominator") ,\
