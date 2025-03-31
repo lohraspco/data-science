@@ -43,11 +43,10 @@ As I learned spark, I decided to share what I learned both for my own reference 
 </br>
 
 
-<a href="https://github.com/lohraspco/data-science/tree/master/spark_practice/">Read more</a>
+<a href="https://github.com/lohraspco/data-science-old/blob/master/apache_spark/README.md/">Read more</a>
 
 # TensorFlow/Keras
 During my Ph.D. studies, with two of my friends we tutored TensorFlow. Check the following links for more information:
-- https://easy-tensorflow.com/
 - https://github.com/easy-tensorflow/easy-tensorflow
 
 </br>
