@@ -1,13 +1,18 @@
 from fastapi import FastAPI, Request, Form, HTTPException
 from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
-from fastapi.responses import HTMLResponse
+from fastapi.responses import HTMLResponse, Response
 from fastapi.middleware.cors import CORSMiddleware
 from pathlib import Path
 import uvicorn
 from typing import Optional
 import json
 import os
+import logging
+
+# Configure logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 # Import your ML models and utilities
 from models.chatbot import Chatbot
@@ -42,6 +47,32 @@ templates = Jinja2Templates(directory=str(templates_dir))
 chatbot = Chatbot()
 forecaster = TimeSeriesForecaster()
 rag_system = RAGSystem()
+
+@app.head("/health")
+@app.get("/health")
+async def health_check():
+    """
+    Health check endpoint that responds to both HEAD and GET requests.
+    This endpoint is used by Azure's load balancers and monitoring systems.
+    Returns:
+        Response: HTTP 200 if healthy, 500 if unhealthy
+    """
+    try:
+        # Check if models are initialized
+        if not all([chatbot, forecaster, rag_system]):
+            logger.error("One or more ML models failed to initialize")
+            return Response(status_code=500)
+            
+        # Check if static and template directories exist
+        if not (static_dir.exists() and templates_dir.exists()):
+            logger.error("Required directories are missing")
+            return Response(status_code=500)
+            
+        # If all checks pass, return 200
+        return Response(status_code=200)
+    except Exception as e:
+        logger.error(f"Health check failed: {str(e)}")
+        return Response(status_code=500)
 
 @app.get("/", response_class=HTMLResponse)
 async def home(request: Request):
