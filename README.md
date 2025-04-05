@@ -21,9 +21,11 @@ In this repo, I share some of my experiences in the following ares:
 - machine learning
     - [applications to marketing](https://github.com/lohraspco/data-science-old/blob/master/marketing/README.md)
         - customer segmentation
+        - customer lifetime value
+        - media mix model
 - LLM, RAG, Chatbot (powering by Deepseek running on Ollama)
 - [Apache Spark / Databricks](./apache_spark/README.md)
-    - recommendation system (ALS, )
+    - recommendation system (ALS)
 - SQL (PostgreSQL 14.0 and PgAdmin 4)
 - NoSQL (Neo4j) 
 - Business Intelligence
