@@ -19,8 +19,11 @@ I built my high-end PC using parts sourced from MicroCenter and a used Nvidia RT
 In this repo, I share some of my experiences in the following ares:
 - [optimization](./optimization/README.md) which contains my optimization model implementations  in Python, Java, and C++.
 - machine learning
+    - [applications to marketing](https://github.com/lohraspco/data-science-old/blob/master/marketing/README.md)
+        - customer segmentation
 - LLM, RAG, Chatbot (powering by Deepseek running on Ollama)
 - [Apache Spark / Databricks](./apache_spark/README.md)
+    - recommendation system (ALS, )
 - SQL (PostgreSQL 14.0 and PgAdmin 4)
 - NoSQL (Neo4j) 
 - Business Intelligence
