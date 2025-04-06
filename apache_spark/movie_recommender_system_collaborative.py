@@ -9,7 +9,6 @@ import sys
 
 
 # did not work
-# print("kl;ads;klfj;kalsjdfj;asdl;fksd;kalsjdl;fksd;jkalsdjfkljkalsadf")
 # SparkFiles.get("movie_helper.py")
 # sys.path.insert(0,SparkFiles.getRootDirectory())
 
