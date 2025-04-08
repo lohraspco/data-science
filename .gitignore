@@ -15,3 +15,8 @@ airflow/logs/*
 check_numpy.sh
 data-science-old.git
 llm/audio_to_text/transcriptions/
+marketing/data
+airflow/logs
+Azure/data
+marketing/data
+python_codes/data
