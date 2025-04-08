@@ -13,3 +13,5 @@ apache_spark/notebooks/
 apache_spark/.ipynb_checkpoints/
 airflow/logs/*
 check_numpy.sh
+data-science-old.git
+llm/audio_to_text/transcriptions/
