@@ -104,3 +104,77 @@ Here is a list of useful links that Steve Nouri has shared on his [Twitter](http
 
 
 10. [SQL](https://www.stratascratch.com/blog/sql-interview-questions-you-must-prepare-the-ultimate-guide/)
+
+
+
+📚 General AI Terms
+AI (Artificial Intelligence): Machines simulating human intelligence.
+
+ML (Machine Learning): Algorithms that improve through data.
+
+Deep Learning: A subset of ML using neural networks with many layers.
+
+Neural Network: A model inspired by the human brain’s neuron structure.
+
+Inference: Making predictions with a trained model.
+
+Training: Teaching a model by showing it data and adjusting weights.
+
+Loss Function: Measures how far off predictions are from actual values.
+
+Backpropagation: Updating weights using the gradient of the loss.
+
+🤖 LLM-Specific Terms
+LLM (Large Language Model): A deep learning model trained on huge amounts of text data to understand/generate human language.
+
+Tokenizer: Breaks text into smaller units (tokens) like words or subwords.
+
+Context Window / Context Length: The number of tokens the model can see at once.
+
+Prompt: Input text given to an LLM to generate a response.
+
+Zero-shot / Few-shot / Fine-tuning:
+
+Zero-shot: Model performs a task with no examples.
+
+Few-shot: Model sees a few examples before performing a task.
+
+Fine-tuning: Training a pre-trained model further on domain-specific data.
+
+Embedding: A vector representation of text.
+
+Attention Mechanism: Lets the model weigh the importance of different words in a sequence.
+
+Transformer: The model architecture behind LLMs like GPT, BERT.
+
+⚙️ Deployment & Engineering
+Serving: Hosting a model so it can respond to real-time queries.
+
+Latency: Time taken to generate a response.
+
+Throughput: Number of queries a model can process in a given time.
+
+Quantization: Reducing the size of the model (e.g., from float32 to int8).
+
+Distillation: Compressing a large model into a smaller one while preserving performance.
+
+🧠 Model Variants
+GPT (Generative Pre-trained Transformer): Autoregressive LLM by OpenAI.
+
+BERT (Bidirectional Encoder Representations from Transformers): Encoder-focused model, great for classification.
+
+RAG (Retrieval-Augmented Generation): Combines LLM with external knowledge retrieval.
+
+LoRA (Low-Rank Adaptation): A method for lightweight fine-tuning.
+
+PEFT (Parameter-Efficient Fine-Tuning): Any fine-tuning that updates only part of the model.
+
+🔍 Data & Evaluation
+Corpus: A large collection of text.
+
+Hallucination: When an LLM generates false or fabricated information.
+
+Perplexity: Measures how well a model predicts text; lower is better.
+
+BLEU / ROUGE / F1: Evaluation metrics for generated text.
+
