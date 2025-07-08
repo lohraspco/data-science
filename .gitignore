@@ -20,3 +20,16 @@ airflow/logs
 Azure/data
 marketing/data
 python_codes/data
+llm/eng-fra-transformer.h5
+llm/eng-fra-transformer_non_gpu.h5
+.gitignore
+data_local/*
+machine_learning/data
+llm/vectorize.pickle
+.gitignore
+vol/fra-eng_extracted/fra.txt
+.gitignore
+llm/text_pairs.pickle
+packagelist.txt
+llm/eng-fra-transformer.keras
+vol/fra-eng_extracted/_about.txt
