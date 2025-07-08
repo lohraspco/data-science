@@ -27,9 +27,7 @@ data_local/*
 machine_learning/data
 llm/vectorize.pickle
 .gitignore
-vol/fra-eng_extracted/fra.txt
-.gitignore
+vol/*
 llm/text_pairs.pickle
 packagelist.txt
 llm/eng-fra-transformer.keras
-vol/fra-eng_extracted/_about.txt
