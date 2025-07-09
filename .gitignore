@@ -32,3 +32,5 @@ llm/text_pairs.pickle
 packagelist.txt
 llm/eng-fra-transformer.keras
 llm/from_scratch_tensorflow/exclude_git/*
+machine_learning/marketing/data/
+autoencoder_tensorflow/autoencoder/images

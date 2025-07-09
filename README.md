@@ -19,7 +19,7 @@ I built my high-end PC using parts sourced from MicroCenter and a used Nvidia RT
 In this repo, I share some of my experiences in the following ares:
 - [optimization](./optimization/README.md) which contains my optimization model implementations  in Python, Java, and C++.
 - machine learning
-    - [applications to marketing](https://github.com/lohraspco/data-science-old/blob/master/marketing/README.md)
+    - [applications to marketing](https://github.com/lohraspco/data-science-old/blob/master/machine_learning/marketing/README.md)
         - customer segmentation
         - customer lifetime value
         - media mix model
