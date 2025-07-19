@@ -34,3 +34,7 @@ llm/eng-fra-transformer.keras
 llm/from_scratch_tensorflow/exclude_git/*
 machine_learning/marketing/data/
 machine_learning/autoencoder_tensorflow/autoencoder/images
+llm/from_scratch_pytorch/from_scratch_tensorflow/exclude_git
+llm/rag/faiss_index/index.faiss
+llm/rag/faiss_index/index.pkl
+llm/rag/transcript.txt

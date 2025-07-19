@@ -40,6 +40,8 @@ dependencies:
     - langchain-core==0.3.66
     - langchain-openai==0.3.26
     - langchain-huggingface==0.3.0
+    - langgraph
+    - langgraph-swarm
     - dspy==2.6.27 
     # GPU Acceleration & CUDA
     - cuda-python==12.9.0

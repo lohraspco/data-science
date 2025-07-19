@@ -1,20 +1,6 @@
 # My data science and programming practices - as of March 2025 
 
-Hello, I'm Matt Najarian. With over seven years of experience in data science and optimization, I currently serve as a lead data scientist. My work spans a variety of projects in areas such as machine learning, deep learning, and optimization. This repository is a collection of my notebooks, code, and notes—curated both as a personal reference and as a potential guide for visitors.
-
-Instead of reinventing the wheel, I will provide you with links to valuable resources. Here are two websites offering comprehensive cheat sheets for data scientists:
-1. https://www.mit.edu/~amidi/teaching/ </br>
-2. https://stanford.edu/~shervine/teaching/
-
-# My Personal Cluster
-
-One of my hobbies is managing my personal computing cluster. It consists of three standard PCs and one high-end PC, on which I have installed several applications to support my projects and experiments.
-<p align="center">
-<img src="./media/eniacw.jpg" alt="Description" width="300" height="300">
-<img src="./media/home_cluster_m_najarian2.jpg" alt="Description" width="500" height="300">
-</p>
-
-I built my high-end PC using parts sourced from MicroCenter and a used Nvidia RTX 3090 Ti Founders Edition (24 GB) that I purchased for $800. The system is powered by a Ryzen 7 CPU and equipped with 32 GB of RAM (F5-6000J3238F16G).
+Hello, and welcome to my page. I'm Matt Najarian. I'm a data scientist with expertise in machine learning, statistics, optimization, and end-to-end model deployment. Over the past few years, I’ve built and deployed predictive models using Python, SQL, Apache Spark, and cloud platforms like Azure Machine Learning, Snowflake, and Databricks. I love teaming up with cross-functional groups, from data engineers to business stakeholders, to turn complex challenges into impactful solutions. 
 
 In this repo, I share some of my experiences in the following ares:
 - [optimization](./optimization/README.md) which contains my optimization model implementations  in Python, Java, and C++.
@@ -23,7 +9,11 @@ In this repo, I share some of my experiences in the following ares:
         - customer segmentation
         - customer lifetime value
         - media mix model
-- LLM, RAG, Chatbot (powering by Deepseek running on Ollama)
+- LLM, RAG, Chatbot (powering by models running locally on Ollama and Hugging Face)
+    - [Retrieval-Augmented Generation](https://github.com/lohraspco/data-science/tree/master/llm/rag)
+    - [Fine-tuning](https://github.com/lohraspco/data-science/tree/master/llm/fine_tuning)
+    - [Multi-Agent system](https://github.com/lohraspco/data-science/tree/master/llm/agentic_ai)
+    - [Transformers From Scratch](https://github.com/lohraspco/data-science/tree/master/llm/from_scratch_pytorch)
 - [Apache Spark / Databricks](./apache_spark/README.md)
     - recommendation system (ALS)
 - SQL (PostgreSQL 14.0 and PgAdmin 4)
@@ -46,6 +36,24 @@ As I learned spark, I decided to share what I learned both for my own reference 
 <li>DataFrame
 <li>MLIB
 </br>
+
+
+
+Instead of reinventing the wheel, I will provide you with links to valuable resources. Here are two websites offering comprehensive cheat sheets for data scientists:
+1. https://www.mit.edu/~amidi/teaching/ </br>
+2. https://stanford.edu/~shervine/teaching/
+
+# My Personal Cluster
+
+One of my hobbies is managing my personal computing cluster. It consists of three standard PCs and one high-end PC, on which I have installed several applications to support my projects and experiments.
+<p align="center">
+<img src="./media/eniacw.jpg" alt="Description" width="300" height="300">
+<img src="./media/home_cluster_m_najarian2.jpg" alt="Description" width="500" height="300">
+</p>
+
+I built my high-end PC using parts sourced from MicroCenter and a used Nvidia RTX 3090 Ti Founders Edition (24 GB) that I purchased for $800. The system is powered by a Ryzen 7 CPU and equipped with 32 GB of RAM (F5-6000J3238F16G).
+
+
 
 
 <a href="https://github.com/lohraspco/data-science-old/blob/master/apache_spark/README.md/">Read more</a>
