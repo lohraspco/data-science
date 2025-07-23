@@ -4,8 +4,11 @@ Hello, and welcome to my page. I'm Matt Najarian. I'm a data scientist with expe
 
 In this repo, I share some of my experiences in the following ares: </br></br>
 **Section1: AI**
+- Timeseries Forecasting
+    - XGBoost, LightGBM, CatBoost. ..
+    - pytorch-forecasting
 - machine learning
-    - [applications to marketing](https://github.com/lohraspco/data-science-old/blob/master/machine_learning/marketing/README.md)
+    - [applications to marketing](https://github.com/lohraspco/data-science-old/blob/master/machine_learning/marketing/)
         - customer segmentation
         - customer lifetime value
         - media mix model

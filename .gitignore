@@ -38,3 +38,8 @@ llm/from_scratch_pytorch/from_scratch_tensorflow/exclude_git
 llm/rag/faiss_index/index.faiss
 llm/rag/faiss_index/index.pkl
 llm/rag/transcript.txt
+llm/data/FashionMNIST/
+llm/runs/
+.gitignore
+llm/data/
+llm/from_scratch_pytorch/

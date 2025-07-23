@@ -14,7 +14,7 @@ dependencies:
     - torch==2.3.0+cu126 --find-links https://download.pytorch.org/whl/cu126
     - torchvision==0.18.0+cu126 --find-links https://download.pytorch.org/whl/cu126
     - torchaudio==2.3.0+cu126 --find-links https://download.pytorch.org/whl/cu126   
-
+    - pytorch-forecasting==1.4.0
     # # Step 2: Install TensorFlow (without auto-upgrading anything)
     - tensorflow==2.16.1 --no-deps
     - absl-py==2.3.0
