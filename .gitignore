@@ -34,3 +34,7 @@ llm/eng-fra-transformer.keras
 llm/from_scratch_tensorflow/exclude_git/*
 machine_learning/marketing/data/
 machine_learning/autoencoder_tensorflow/autoencoder/images
+machine_learning/FashionMNIST/
+machine_learning/runs/
+machine_learning/stock/alpha_vantage_data/SPY_*.csv
+machine_learning/stock/SPY_1m_Mar-Jun2025.csv
