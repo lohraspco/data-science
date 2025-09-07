@@ -1,5 +1,5 @@
 In this section there are three sub-sections:
-- [SQL Interview](https://github.com/lohraspco/data-science/blob/master/SQL/sql_codes.ipynb.md) 
+- [SQL Interview](https://github.com/lohraspco/data-science/blob/master/SQL/sql_codes.ipynb) 
 - [NoSQL (Neo4j)](https://github.com/lohraspco/data-science-old/blob/master/SQL/no_sql.md)
 Most of the SQL examples are mainly applied on the DVD rental database. This database is an example database for PostgreSQL.
 
