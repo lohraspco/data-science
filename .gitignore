@@ -47,3 +47,4 @@ llm/runs/
 .gitignore
 llm/data/
 llm/from_scratch_pytorch/
+machine_learning/FashionMNIST
