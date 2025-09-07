@@ -26,7 +26,9 @@ While I was preparing for Databricks Certified Associate Developer for Apache ex
 - Cluster architecture: nodes, drivers, workers, executors, slots(parallel capacity on executor).
   
   Spark execution hierarchy: 
-    - **applications**: an application contains one or more jobs, and it interacts with the driver and cluster manager to execute
+    - **applications**: The actual Spark job(s) that you run, which begins by instantiating a SparkSession that manages its SparkContext. It interacts with the driver and cluster manager to execute.
+    - **SparkContext**: Low-level interface that connects application to the cluster and schedules tasks.
+    - **SparkSession**: High-level abstraction built on top of SparkContext that lets you work with structured data (DataFrames, SQL, etc.).
     - **jobs**: A job is triggered by an action (like collect() or save() in Spark)
     - **stages**: A stage is a subdivision of a job and consists of tasks that can be executed without shuffling data between nodes. Stages are defined by transformations and are separated whenever a shuffle (data reorganization) occurs.
     - **tasks**: A task processes a single partition of data within a stage. Tasks are executed in parallel across the cluster.

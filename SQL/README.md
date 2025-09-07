@@ -1,5 +1,5 @@
 In this section there are three sub-sections:
-- [Basic SQL commands](https://github.com/lohraspco/data-science-old/blob/master/SQL/sql_codes.md) 
+- [Basic SQL commands](https://github.com/lohraspco/data-science-old/blob/master/SQL/sql_cmds.md) 
 - [SQL interview questions and answers](https://github.com/lohraspco/data-science-old/blob/master/SQL/sql_interview_questions.md)
 - [NoSQL (Neo4j)](https://github.com/lohraspco/data-science-old/blob/master/SQL/no_sql.md)
 The examples are mainly applied on the DVD rental database. This database is an example database for PostgreSQL.
