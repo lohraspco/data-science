@@ -14,7 +14,7 @@ dependencies:
     - torch==2.3.0+cu126 --find-links https://download.pytorch.org/whl/cu126
     - torchvision==0.18.0+cu126 --find-links https://download.pytorch.org/whl/cu126
     - torchaudio==2.3.0+cu126 --find-links https://download.pytorch.org/whl/cu126   
-
+    - pytorch-forecasting==1.4.0
     # # Step 2: Install TensorFlow (without auto-upgrading anything)
     - tensorflow==2.16.1 --no-deps
     - absl-py==2.3.0
@@ -40,6 +40,8 @@ dependencies:
     - langchain-core==0.3.66
     - langchain-openai==0.3.26
     - langchain-huggingface==0.3.0
+    - langgraph
+    - langgraph-swarm
     - dspy==2.6.27 
     # GPU Acceleration & CUDA
     - cuda-python==12.9.0

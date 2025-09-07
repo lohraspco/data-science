@@ -23,6 +23,9 @@ services:
       - "8090:80"
     depends_on:
       - postgres
+    volumes:
+      - pgadmin_volume:/var/lib/pgadmin/storage
 
 volumes:
   postgres_data:
+  pgadmin_volume:

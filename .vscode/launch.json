@@ -2,9 +2,23 @@
     "configurations": [
         {
             "name": "Python: Module",
-            "type": "python",
+            "type": "debugpy",
             "request": "launch",
             "module": "sparkha.${fileBasenameNoExtension}"
+        },
+        {
+            "name": "Debug Streamlit App",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "streamlit", // Specifies to run the 'streamlit' module
+            "args": [
+                "run",
+                "${file}" // This will automatically use the currently active Python file in VS Code
+                // You can replace "${file}" with "your_app_name.py" if you always debug the same file
+                // "--server.port", "8501" // Optional: Specify a fixed port
+            ],
+            "console": "integratedTerminal", // Or "externalTerminal" if you prefer a separate window
+            "justMyCode": true // Set to false if you want to step into installed library code
         }
     ]
 }

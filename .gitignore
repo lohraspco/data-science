@@ -38,3 +38,12 @@ machine_learning/FashionMNIST/
 machine_learning/runs/
 machine_learning/stock/alpha_vantage_data/SPY_*.csv
 machine_learning/stock/SPY_1m_Mar-Jun2025.csv
+llm/from_scratch_pytorch/from_scratch_tensorflow/exclude_git
+llm/rag/faiss_index/index.faiss
+llm/rag/faiss_index/index.pkl
+llm/rag/transcript.txt
+llm/data/FashionMNIST/
+llm/runs/
+.gitignore
+llm/data/
+llm/from_scratch_pytorch/

@@ -1,10 +1,45 @@
 # My data science and programming practices - as of March 2025 
 
-Hello, I'm Matt Najarian. With over seven years of experience in data science and optimization, I currently serve as a lead data scientist. My work spans a variety of projects in areas such as machine learning, deep learning, and optimization. This repository is a collection of my notebooks, code, and notes—curated both as a personal reference and as a potential guide for visitors.
+Hello, and welcome to my page. I'm Matt Najarian. I'm a data scientist with expertise in machine learning, statistics, optimization, and end-to-end model deployment. Over the past few years, I’ve built and deployed predictive models using Python, SQL, Apache Spark, and cloud platforms like Azure Machine Learning, Snowflake, and Databricks. I love teaming up with cross-functional groups, from data engineers to business stakeholders, to turn complex challenges into impactful solutions. 
 
-Instead of reinventing the wheel, I will provide you with links to valuable resources. Here are two websites offering comprehensive cheat sheets for data scientists:
-1. https://www.mit.edu/~amidi/teaching/ </br>
-2. https://stanford.edu/~shervine/teaching/
+In this repo, I share some of my experiences in the following ares: </br></br>
+**Section1: AI**
+- Timeseries Forecasting
+    - XGBoost, LightGBM, CatBoost. ..
+    - pytorch-forecasting
+- machine learning
+    - [applications to marketing](https://github.com/lohraspco/data-science-old/blob/master/machine_learning/marketing/)
+        - customer segmentation
+        - customer lifetime value
+        - media mix model
+- LLM, RAG, Chatbot (powering by models running locally on Ollama and Hugging Face)
+    - [Retrieval-Augmented Generation](https://github.com/lohraspco/data-science/tree/master/llm/rag)
+    - [Fine-tuning](https://github.com/lohraspco/data-science/tree/master/llm/fine_tuning)
+    - [Multi-Agent system](https://github.com/lohraspco/data-science/tree/master/llm/agentic_ai)
+    - [Transformers From Scratch](https://github.com/lohraspco/data-science/tree/master/llm/from_scratch_pytorch)
+- PyTorch, TensorFlow, and Keras
+
+- [Apache Spark / Databricks](./apache_spark/README.md)
+    - recommendation system (ALS)
+    - RDD, DataFrame, and MLIB
+</br></br>
+
+
+**Section2: Optimization**
+
+- [optimization](./optimization/README.md) which contains my optimization model implementations  in Python, Java, and C++. Here is a list of project codes you will find:
+
+    - [Security Constrained Unit Commitment](https://github.com/lohraspco/data-science/tree/master/optimization/python/unit_commitment_py): Unit Commitment is the process of turning on (committing) resources to meet load and other market requirements. • Security-Constrained Unit Commitment (SCUC) commits units (electricity generators). while respecting limitations of the transmission system and unit. I have coded it in Java and Python.
+
+    - [Maximizing Infrastructure Resiliency Under Budgetary Constraint](https://github.com/lohraspco/data-science/tree/master/optimization/python/investment_py): it is crucial for investment on resiliency to distribute budget among different resources, in a way that the effect is maximized. Check my paper in the following link: https://www.sciencedirect.com/science/article/abs/pii/S0951832019308336
+
+    - [Component Importance](https://github.com/lohraspco/data-science/tree/master/optimization/python/component_importance_py): at the time of recovery from a disaster, some components play a more important. This is an ongoing research of mine to find those components. The codes include cool visualization (Cytoscape) and random graph generation codes.
+
+- SQL (PostgreSQL 14.0 and PgAdmin 4)
+- NoSQL (Neo4j) 
+- Business Intelligence (Apache SuperSet, Tableau)
+
+
 
 # My Personal Cluster
 
@@ -16,73 +51,20 @@ One of my hobbies is managing my personal computing cluster. It consists of thre
 
 I built my high-end PC using parts sourced from MicroCenter and a used Nvidia RTX 3090 Ti Founders Edition (24 GB) that I purchased for $800. The system is powered by a Ryzen 7 CPU and equipped with 32 GB of RAM (F5-6000J3238F16G).
 
-In this repo, I share some of my experiences in the following ares:
-- [optimization](./optimization/README.md) which contains my optimization model implementations  in Python, Java, and C++.
-- machine learning
-    - [applications to marketing](https://github.com/lohraspco/data-science-old/blob/master/machine_learning/marketing/README.md)
-        - customer segmentation
-        - customer lifetime value
-        - media mix model
-- LLM, RAG, Chatbot (powering by Deepseek running on Ollama)
-- [Apache Spark / Databricks](./apache_spark/README.md)
-    - recommendation system (ALS)
-- SQL (PostgreSQL 14.0 and PgAdmin 4)
-- NoSQL (Neo4j) 
-- Business Intelligence
 
+</br>
 
- and platforms:
-- Apache SuperSet
-- Hadoop
-- Spark 3
-- The current demo application (will be live soon visit [projects.lohrasp.com](http://projects.lohrasp.com/))
+What runs on this cluster are: 
+- Hadoop and Apache Spark
+- Ollama
 - PostgreSQL 14.0 and PgAdmin 4
 - Apache Airflow
-
-# Apache Spark / Databricks
-As I learned spark, I decided to share what I learned both for my own reference future readers.
-<li>Spark installation
-<li>RDD
-<li>DataFrame
-<li>MLIB
-</br>
-
-
-<a href="https://github.com/lohraspco/data-science-old/blob/master/apache_spark/README.md/">Read more</a>
-
-# TensorFlow/Keras
-During my Ph.D. studies, with two of my friends we tutored TensorFlow. Check the following links for more information:
-- https://github.com/easy-tensorflow/easy-tensorflow
-
-</br>
-
-# Python Tips and Projects
-
-In in the <a href="https://github.com/lohraspco/data-science/tree/master/python_codes/">python_codes</a> subdirectory, I have included some of my personal and educational projects. Here is a list of items you will find: 
-
-- <a href="https://github.com/lohraspco/data-science/blob/master/python_codes/python_cheat_sheet.ipynb"> Python cheat sheet</a>: I have noted down some tips and tricks while working on different projects which can be useful to you. 
-
-- <a href="https://github.com/lohraspco/data-science/tree/master/python_codes/unit_commitment" style="bold">Security Constrained Unit Commitment</a>: Unit Commitment is the process of turning on (committing) resources to meet load and other market requirements. • Security-Constrained Unit Commitment (SCUC) commits units (electricity generators). while respecting limitations of the transmission system and unit. I have coded it in <a href="https://github.com/lohraspco/data-science/tree/master/Java_and_CPP/unit_commitment_Java">Java</a> and <a href="https://github.com/lohraspco/data-science/tree/master/python_codes/unit_commitment">Python</a>. 
-
-- <a href="https://github.com/lohraspco/data-science/tree/master/python_codes/investment">Maximizing Infrastructure Resiliency Under Budgetary Constraint</a>: it is crucial for investment on resiliency to distribute budget among different resources, in a way that the effect is maximized. Check my paper in the following link:
-https://www.sciencedirect.com/science/article/abs/pii/S0951832019308336
-
-- <a href="https://github.com/lohraspco/data-science/tree/master/python_codes/component_importance">Component Importance</a>: at the time of recovery from a disaster, some components play a more important. This is an ongoing research of mine to find those components. The codes include cool visualization (<a href="https://cytoscape.org/">Cytoscape</a>) and random graph generation codes.  
-
-
-</br>
-
-# SQL Tips and Tricks
-There are some SQL cheatsheet and tips that I added to [SQL](https://github.com/lohraspco/data-science/tree/master/SQL) folder
-
-## FastApi codes
-Visit the simple site the I have created using FastApi at http://projects.lohrasp.com/.
 
 
 </br>
 
 # Useful Links
-Here is a list of useful links that Steve Nouri has shared on his [Twitter](https://www.linkedin.com/in/stevenouri?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAAAj_qcABebPCFHyk-0_-nNFZsxiGnzK5i6c&lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BqMLBp%2FEXQ1e2hvalwm580g%3D%3D&licu=urn%3Ali%3Acontrol%3Ad_flagship3_feed-actor_container&lici=YuWZTkjVPY88%2B%2BlL9xXKFg%3D%3D) account. While I put them here for simplicity of acces, please also read on the Twitter. 
+Here is a list of useful links that Steve Nouri has shared on his [Twitter](https://www.linkedin.com/in/stevenouri?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAAAj_qcABebPCFHyk-0_-nNFZsxiGnzK5i6c&lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BqMLBp%2FEXQ1e2hvalwm580g%3D%3D&licu=urn%3Ali%3Acontrol%3Ad_flagship3_feed-actor_container&lici=YuWZTkjVPY88%2B%2BlL9xXKFg%3D%3D) account plus two other links that I added to it. While I put them here for simplicity of acces, please also read on the Twitter. 
 
 1. [All algorithms implemented in Python, by: The Algorithms](https://github.com/TheAlgorithms/Python)
 
@@ -106,75 +88,5 @@ Here is a list of useful links that Steve Nouri has shared on his [Twitter](http
 10. [SQL](https://www.stratascratch.com/blog/sql-interview-questions-you-must-prepare-the-ultimate-guide/)
 
 
-
-📚 General AI Terms
-AI (Artificial Intelligence): Machines simulating human intelligence.
-
-ML (Machine Learning): Algorithms that improve through data.
-
-Deep Learning: A subset of ML using neural networks with many layers.
-
-Neural Network: A model inspired by the human brain’s neuron structure.
-
-Inference: Making predictions with a trained model.
-
-Training: Teaching a model by showing it data and adjusting weights.
-
-Loss Function: Measures how far off predictions are from actual values.
-
-Backpropagation: Updating weights using the gradient of the loss.
-
-🤖 LLM-Specific Terms
-LLM (Large Language Model): A deep learning model trained on huge amounts of text data to understand/generate human language.
-
-Tokenizer: Breaks text into smaller units (tokens) like words or subwords.
-
-Context Window / Context Length: The number of tokens the model can see at once.
-
-Prompt: Input text given to an LLM to generate a response.
-
-Zero-shot / Few-shot / Fine-tuning:
-
-Zero-shot: Model performs a task with no examples.
-
-Few-shot: Model sees a few examples before performing a task.
-
-Fine-tuning: Training a pre-trained model further on domain-specific data.
-
-Embedding: A vector representation of text.
-
-Attention Mechanism: Lets the model weigh the importance of different words in a sequence.
-
-Transformer: The model architecture behind LLMs like GPT, BERT.
-
-⚙️ Deployment & Engineering
-Serving: Hosting a model so it can respond to real-time queries.
-
-Latency: Time taken to generate a response.
-
-Throughput: Number of queries a model can process in a given time.
-
-Quantization: Reducing the size of the model (e.g., from float32 to int8).
-
-Distillation: Compressing a large model into a smaller one while preserving performance.
-
-🧠 Model Variants
-GPT (Generative Pre-trained Transformer): Autoregressive LLM by OpenAI.
-
-BERT (Bidirectional Encoder Representations from Transformers): Encoder-focused model, great for classification.
-
-RAG (Retrieval-Augmented Generation): Combines LLM with external knowledge retrieval.
-
-LoRA (Low-Rank Adaptation): A method for lightweight fine-tuning.
-
-PEFT (Parameter-Efficient Fine-Tuning): Any fine-tuning that updates only part of the model.
-
-🔍 Data & Evaluation
-Corpus: A large collection of text.
-
-Hallucination: When an LLM generates false or fabricated information.
-
-Perplexity: Measures how well a model predicts text; lower is better.
-
-BLEU / ROUGE / F1: Evaluation metrics for generated text.
-
+11. https://www.mit.edu/~amidi/teaching/ </br>
+12. https://stanford.edu/~shervine/teaching/
