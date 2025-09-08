@@ -1,0 +1,56 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "your-lib"
+version = "0.3.1"                  # or omit if using setuptools_scm
+description = "Fast tools for XYZ"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { file = "LICENSE" }
+authors = [{ name = "Matt Najarian" }]
+keywords = ["optimization", "supply-chain", "analytics"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Typing :: Typed"
+]
+dependencies = [
+  "numpy>=1.26",
+  "pandas>=2.0"
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "pytest-cov", "ruff", "mypy", "build", "twine"]
+docs = ["mkdocs", "mkdocs-material"]
+
+[project.urls]
+Homepage = "https://github.com/your-org/your-lib"
+Issues = "https://github.com/your-org/your-lib/issues"
+
+[project.scripts]               # CLI entry points (optional)
+your-lib = "your_lib.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["your_lib*"]
+
+[tool.setuptools.package-data]  # ship non-code data files
+your_lib = ["data/*.json"]
+
+# Lint/type/check config (keeps CI simple)
+[tool.ruff]
+line-length = 100
+select = ["E","F","I","UP"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+plugins = []
+
+[tool.pytest.ini_options]
+addopts = "-q --disable-warnings --maxfail=1"

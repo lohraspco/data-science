@@ -43,3 +43,8 @@ llm/runs/
 .gitignore
 llm/data/
 llm/from_scratch_pytorch/
+machine_learning/time_series/lightning_logs/
+mlruns/
+mlartifacts/
+machine_learning/mlflow_registry.db
+interview/src/dsutils/__pycache__/
