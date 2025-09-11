@@ -35,8 +35,17 @@ While I was preparing for Databricks Certified Associate Developer for Apache ex
 - Partitioning: dividing a dataset into smaller, manageable chunks (partitions) that can be processed independently. The choice of partitioning strategy (e.g., hash or range partitioning) impacts efficiency.
 - Shuffling: appens when operations like groupBy, join, or reduceByKey require data to be rearranged
 - Transformations: Transformations are operations that create a new dataset from an existing one.
-    - Narrow transformations:  No data shuffling between nodes and can be pipelined. map(), filter(), mapPartitions(), coalesce()
-    - Wide transformations: data from multiple input partitions may contribute to one or more output partitions (involves data shuffling). groupByKey(), reduceByKey() , join(), repartition(), sortByKey()
+    - Narrow transformations:  No data shuffling between nodes and can be pipelined. 
+      - map() → apply a function to each element
+      - filter() → keep only elements that match a condition
+      - mapPartitions() → apply function at partition levelmap(), 
+      - coalesce() → reduce number of partitions
+    - Wide transformations: data from multiple input partitions may contribute to one or more output partitions (involves data shuffling). 
+      - groupByKey() → shuffle keys to same partition
+      - reduceByKey() → shuffle, then reduce
+      - join() → shuffle keys from both datasets
+      - repartition() → redistribute into new partitions
+      - sortByKey() → shuffle to order data
 - Lazy evaluation
 
 - Execution deployment modes (Local, client, cluster: spark-submit --master spark://<master-host>:7077 --deploy-mode cluster my_app.py).  </br>

@@ -7,11 +7,13 @@ In this repo, I share some of my experiences in the following ares: </br></br>
 - Timeseries Forecasting
     - XGBoost, LightGBM, CatBoost. ..
     - pytorch-forecasting
-- machine learning
-    - [applications to marketing](https://github.com/lohraspco/data-science-old/blob/master/machine_learning/marketing/)
-        - customer segmentation
-        - customer lifetime value
-        - media mix model
+
+ - [applications to marketing](https://github.com/lohraspco/data-science-old/blob/master/machine_learning/marketing/)
+    - customer segmentation
+    - customer lifetime value
+    - media mix model
+    - causal inference
+
 - LLM, RAG, Chatbot (powering by models running locally on Ollama and Hugging Face)
     - [Retrieval-Augmented Generation](https://github.com/lohraspco/data-science/tree/master/llm/rag)
     - [Fine-tuning](https://github.com/lohraspco/data-science/tree/master/llm/fine_tuning)

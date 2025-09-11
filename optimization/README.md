@@ -19,3 +19,15 @@ codes in Java.
 
 # C++
 Folder cpp/stochastic_programming_CPP contain my code in C++ which implements an iterative algorithm that calls  IBM CPLEX API for optimization in its iterations to solve a special type of electricity market problem. Here is a link to the a [paper draft](./cpp/stochastic_programming_CPP/bidding%20strategy%2020160125-1.docx) that is not submitted yet.
+
+
+# Network Visualization
+For visualization I have used two libraries: 
+1- networkx 
+
+<img src="https://raw.githubusercontent.com/lohraspco/data-science/master/media/Permian.jpg" width="400" height="300">
+
+
+2- One of the coolest libraries: Cytoscape.
+
+![plot](../media/emailNetwork01_small.png)
