@@ -53,3 +53,5 @@ machine_learning/mlflow_registry.db
 interview/src/dsutils/__pycache__/
 machine_learning/FashionMNIST
 interview/data/
+mlartifacts/
+mlruns/
