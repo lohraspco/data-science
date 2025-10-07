@@ -15,10 +15,9 @@ airflow/logs/*
 check_numpy.sh
 data-science-old.git
 llm/audio_to_text/transcriptions/
-marketing/data
+product_and_marketing/data
 airflow/logs
 Azure/data
-marketing/data
 python_codes/data
 llm/eng-fra-transformer.h5
 llm/eng-fra-transformer_non_gpu.h5
@@ -32,7 +31,7 @@ llm/text_pairs.pickle
 packagelist.txt
 llm/eng-fra-transformer.keras
 llm/from_scratch_tensorflow/exclude_git/*
-machine_learning/marketing/data/
+machine_learning/product_and_marketing/data/
 machine_learning/autoencoder_tensorflow/autoencoder/images
 machine_learning/FashionMNIST/
 machine_learning/runs/
@@ -47,4 +46,10 @@ llm/runs/
 .gitignore
 llm/data/
 llm/from_scratch_pytorch/
+machine_learning/time_series/lightning_logs/
+mlruns/
+mlartifacts/
+machine_learning/mlflow_registry.db
+interview/src/dsutils/__pycache__/
 machine_learning/FashionMNIST
+interview/data/
