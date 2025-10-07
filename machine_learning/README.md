@@ -8,7 +8,9 @@ The Machine Learning (ML) lifecycle is a set of steps that guide the development
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
 
 Machine Learning encompasses 
-- supervised methods such as classification and regression, 
+- supervised methods such as 
+    - classification (StratifiedKFold)
+    - regression 
 - unsupervised methods such as clustering, 
 - and reinforcement learning for sequential decision-making.
 
