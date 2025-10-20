@@ -1,17 +1,23 @@
-version: '3.8'
-
 services:
   postgres:
-    image: postgres:latest
-    container_name: postgres_container
+    image: pgvector/pgvector:pg18-bookworm
+    container_name: pgvector_container
     environment:
       POSTGRES_USER: admin
       POSTGRES_PASSWORD: lohraspco
       POSTGRES_DB: postgres
+      TZ: UTC
     ports:
       - "5432:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
+      - ./init-db.sql:/docker-entrypoint-initdb.d/init-db.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U agentflow -d agentflow"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
 
   pgadmin:
     image: dpage/pgadmin4:latest
@@ -19,13 +25,15 @@ services:
     environment:
       PGADMIN_DEFAULT_EMAIL: lohcaspco@gmail.com
       PGADMIN_DEFAULT_PASSWORD: lohraspco
+    depends_on:
+      - postgres    
     ports:
       - "8090:80"
-    depends_on:
-      - postgres
     volumes:
-      - pgadmin_volume:/var/lib/pgadmin/storage
+      - pgadmin_volume:/var/lib/pgadmin
 
 volumes:
   postgres_data:
   pgadmin_volume:
+
+  
