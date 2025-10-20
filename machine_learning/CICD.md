@@ -10,7 +10,7 @@ Changes to code, training scripts, or data pipelines are committed to a Git repo
 - **Data Validation**: Ensure data quality, schema integrity, and distribution changes are tracked and validated.
 - **Model Code Quality Checks**: Run static analysis and unit tests on training and serving code.
 ## Continuous Delivery (CD):
-- **Automated Model Training**: Trigger Azure ML pipelines to retrain models based on new data or code changes. This can involve using compute clusters (including GPU-based clusters for large models).
+- <span style="color:blue"> **Automated Model Training**</span>: Trigger Azure ML pipelines to retrain models based on new data or code changes. This can involve using compute clusters (including GPU-based clusters for large models).
 - **Model Validation and Evaluation**: Evaluate the performance of the newly trained model against validation datasets and established metrics.
 - **Automated Deployment**: Deploy the validated model to various environments (e.g., testing, staging, production) using Azure ML endpoints or other deployment targets.
 - **Monitoring and Alerting**: Implement monitoring for data drift, model performance degradation, and other operational metrics using Azure ML's dataset monitors and logging. Set up alerts to trigger retraining or other actions when issues are detected.
@@ -43,24 +43,13 @@ a server that runs your workflows when they're triggered
 General best practices for container-ready code
 - Follow the twelve-factor app methodology: The twelve-factor principles provide a foundation for building portable, resilient, and scalable applications suitable for containerization.
 - Write stateless and ephemeral code: Containers can be stopped and destroyed at any time. Any data that needs to persist across container restarts should be stored outside the container, in a database or a mounted volume. Avoid writing data to the local filesystem inside the container, as it will be lost when the container is replaced.
-Decouple your application: Run only a single application or process per container. If your application relies on a database or other services, run each dependency in its own separate container and manage their communication through container networks.
-Isolate configuration: Do not bake sensitive information like passwords or API keys directly into your code or the container image. Use environment variables, configuration files mounted as volumes, or a secret management system to inject configuration at runtime.
-Implement proper logging: Containers are ephemeral, so log data should not be written to the container's local disk. Instead, write logs to standard output ($stdout) and standard error ($stderr) where a log collector can capture and centralize them.
-Handle signals gracefully: Your application should handle termination signals (like SIGTERM) gracefully to perform a clean shutdown, such as finishing any in-progress requests and closing database connections.
-Make it easy to debug: Include health check endpoints (e.g., /healthz and /readiness) in your application. These can be used by orchestration platforms like Kubernetes to manage the application's lifecycle. 
-Docker-specific best practices
-A Dockerfile contains all the commands to assemble a container image. Creating an efficient, secure, and reproducible Dockerfile is key to having container-ready code. 
-Optimize for small image size
-Use minimal base images: Instead of using a full-featured operating system like Ubuntu, opt for a minimal base image like Alpine or a language-specific one like python:3.12-slim to reduce the image size and potential attack surface.
-Use multi-stage builds: A multi-stage build uses one stage to build your application with all the necessary tools and another, much smaller stage to run it. This prevents build tools and temporary files from being included in the final image.
-Remove unnecessary packages and files: In your Dockerfile, combine RUN commands to clean up caches and other unnecessary data to keep your image size small. 
-Improve security
-Run as a non-root user: By default, containers run processes as the root user. Best practice is to use the USER instruction to switch to a non-root user and group, which provides an additional layer of isolation.
-Pin base image versions: Explicitly specify the version of your base image (e.g., FROM node:22-alpine instead of FROM node:alpine) to ensure that builds are reproducible. 
-Maximize efficiency
-Leverage the build cache: The Docker build process caches layers. Place instructions in your Dockerfile that change infrequently (e.g., installing dependencies) before those that change often (e.g., copying application code) to speed up your build times.
-Combine RUN commands: Chain multiple commands into a single RUN instruction using && to reduce the number of layers in your image.
-Use .dockerignore: Add a .dockerignore file to your project to exclude files and folders not relevant to the build context, such as .git and node_modules. This speeds up the docker build command and reduces image size. 
+- Decouple your application: Run only a single application or process per container. If your application relies on a database or other services, run each dependency in its own separate container and manage their communication through container networks.
+- Isolate configuration: Do not bake sensitive information like passwords or API keys directly into your code or the container image. Use environment variables, configuration files mounted as volumes, or a secret management system to inject configuration at runtime.
+- Implement proper logging: Containers are ephemeral, so log data should not be written to the container's local disk. Instead, write logs to standard output ($stdout) and standard error ($stderr) where a log collector can capture and centralize them.
+- Handle signals gracefully: Your application should handle termination signals (like SIGTERM) gracefully to perform a clean shutdown, such as finishing any in-progress requests and closing database connections.
+- Make it easy to debug: Include health check endpoints (e.g., /healthz and /readiness) in your application. These can be used by orchestration platforms like Kubernetes to manage the application's lifecycle. 
+
+
 Example: A container-ready Python application
 This example demonstrates how to apply many of these principles to a simple Python Flask application.
 1. The Python application (app.py)
