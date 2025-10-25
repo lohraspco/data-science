@@ -1,0 +1,77 @@
+<mxfile host="65bd71144e">
+    <diagram id="ml-lifecycle-001" name="Machine Learning Lifecycle">
+        <mxGraphModel dx="1844" dy="1222" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1920" pageHeight="1080" background="#ffffff" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="title" value="Machine Learning Lifecycle" style="text;html=1;fontSize=30;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="520" y="50" width="550" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="phase1" value="1) Business Understanding" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=22;" parent="1" vertex="1">
+                    <mxGeometry x="20" y="40" width="220" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="phase2" value="2) Data Collection" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=22;" parent="1" vertex="1">
+                    <mxGeometry x="20" y="180" width="220" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="phase4" value="4) Modeling / Training" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=22;" parent="1" vertex="1">
+                    <mxGeometry x="1070" y="180" width="220" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="phase5" value="5) Evaluation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=22;" parent="1" vertex="1">
+                    <mxGeometry x="1090" y="330" width="180" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="phase6" value="6) Deployment" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#cfe2f3;strokeColor=#6fa8dc;fontSize=22;" parent="1" vertex="1">
+                    <mxGeometry x="820" y="330" width="180" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="phase7" value="7) Monitoring &amp;amp; Feedback" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d9ead3;strokeColor=#93c47d;fontSize=22;" parent="1" vertex="1">
+                    <mxGeometry x="520" y="330" width="240" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;strokeWidth=2;fontSize=22;" parent="1" source="phase1" target="phase2" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;strokeWidth=2;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=1;entryDx=0;entryDy=0;fontSize=22;" parent="1" source="phase2" target="phase3" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;strokeWidth=2;fontSize=22;" parent="1" source="phase3" target="phase4" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;strokeWidth=2;fontSize=22;" parent="1" source="phase4" target="phase5" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;strokeWidth=2;fontSize=22;" parent="1" source="phase5" target="phase6" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;strokeWidth=2;fontSize=22;" parent="1" source="phase6" target="phase7" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="loop1" value="drift,&amp;nbsp;&lt;div&gt;new data,&amp;nbsp;&lt;/div&gt;&lt;div&gt;new labels&lt;/div&gt;" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;strokeWidth=2;dashed=1;dashPattern=8 4;entryX=1;entryY=0;entryDx=0;entryDy=0;exitX=0;exitY=0;exitDx=0;exitDy=0;fontSize=22;" parent="1" source="phase3" target="phase2" edge="1">
+                    <mxGeometry y="-10" relative="1" as="geometry">
+                        <mxPoint x="1700" y="340" as="sourcePoint"/>
+                        <mxPoint x="420" y="340" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="371" y="170"/>
+                        </Array>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="note1" value="KPIs:&amp;nbsp;&lt;div&gt;&lt;ul&gt;&lt;li&gt;Accuracy&amp;nbsp;&lt;/li&gt;&lt;li&gt;Precision/Recall&amp;nbsp;&lt;/li&gt;&lt;li&gt;AUC&amp;nbsp;&lt;/li&gt;&lt;li&gt;MAPE&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#b3b3b3;fontSize=15;dashed=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="1100" y="420" width="160" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="note2" value="Artifacts:&amp;nbsp;&lt;div&gt;&lt;ul&gt;&lt;li&gt;Data Schema&amp;nbsp;&lt;/li&gt;&lt;li&gt;Feature Store&amp;nbsp;&lt;/li&gt;&lt;li&gt;Model Registry&amp;nbsp;&lt;/li&gt;&lt;li&gt;CI/CD&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#b3b3b3;fontSize=15;dashed=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="830" y="420" width="170" height="190" as="geometry"/>
+                </mxCell>
+                <mxCell id="note3" value="Monitoring:&amp;nbsp;&lt;div&gt;&lt;ul&gt;&lt;li&gt;Data/Concept Drift&amp;nbsp;&lt;/li&gt;&lt;li&gt;Latency&amp;nbsp;&lt;/li&gt;&lt;li&gt;Costs&amp;nbsp;&lt;/li&gt;&lt;li&gt;Alerts&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#b3b3b3;fontSize=15;dashed=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="520" y="420" width="180" height="170" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" value="" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;strokeWidth=2;dashed=1;dashPattern=8 4;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontSize=22;" edge="1" parent="1" source="phase7" target="phase3">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1100" y="490" as="sourcePoint"/>
+                        <mxPoint x="560" y="220" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="phase3" value="3) Data Cleaning &amp;amp; Feature Engineering" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=22;" parent="1" vertex="1">
+                    <mxGeometry x="500" y="180" width="260" height="80" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

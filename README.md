@@ -1,30 +1,35 @@
 # My data science and programming practices - as of March 2025 
 
-Hello, and welcome to my page. I'm Matt Najarian. I'm a data scientist with expertise in machine learning, statistics, optimization, and end-to-end model deployment. Over the past few years, I’ve built and deployed predictive models using Python, SQL, Apache Spark, and cloud platforms like Azure Machine Learning, Snowflake, and Databricks. I love teaming up with cross-functional groups, from data engineers to business stakeholders, to turn complex challenges into impactful solutions. 
+Hi, I’m Matt Najarian 👋</br>
+I’m a data scientist specializing in machine learning, statistics, optimization, natural language processing (including RAG and NER), and full-cycle model deployment. Over the past few years, I’ve developed and deployed predictive models with Python, SQL, Apache Spark, and cloud platforms such as Azure Machine Learning, Snowflake, and Databricks. I enjoy collaborating with cross-functional teams—ranging from data engineers to business leaders—to transform complex problems into practical, high-impact solutions.</br>
+</br>
+
 
 In this repo, I share some of my experiences in the following ares: </br></br>
 **Section1: AI**
 - Timeseries Forecasting
-    - XGBoost, LightGBM, CatBoost. ..
-    - pytorch-forecasting
-
+    - SARIMAX,Linear Regressions, 
+    - XGBoost, LightGBM, CatBoost, 
+    - FaceBook Prophet,
+    - and pytorch-forecasting
+- [Apache Spark / Databricks](./apache_spark/README.md)
+    - recommendation system (ALS)
+    - RDD, DataFrame, and MLIB
  - [applications to marketing](https://github.com/lohraspco/data-science-old/blob/master/machine_learning/marketing/)
     - customer segmentation
     - customer lifetime value
     - media mix model
     - causal inference
 
-- LLM, RAG, Chatbot (powering by models running locally on Ollama and Hugging Face)
+- LLM, RAG, Chatbot 
     - [Retrieval-Augmented Generation](https://github.com/lohraspco/data-science/tree/master/llm/rag)
     - [Fine-tuning](https://github.com/lohraspco/data-science/tree/master/llm/fine_tuning)
     - [Multi-Agent system](https://github.com/lohraspco/data-science/tree/master/llm/agentic_ai)
     - [Transformers From Scratch](https://github.com/lohraspco/data-science/tree/master/llm/from_scratch_pytorch)
 - PyTorch, TensorFlow, and Keras
 
-- [Apache Spark / Databricks](./apache_spark/README.md)
-    - recommendation system (ALS)
-    - RDD, DataFrame, and MLIB
-</br></br>
+
+</br>
 
 
 **Section2: Optimization**
