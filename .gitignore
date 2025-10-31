@@ -57,3 +57,4 @@ machine_learning/cyber_security/data
 interview/.cache.sqlite
 llm/audioabrahamlincolnmystic_2_grierson_64kb.mp3
 .env
+llm/named_entity_recognition/tokens_secrets
