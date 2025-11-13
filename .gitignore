@@ -53,8 +53,16 @@ machine_learning/mlflow_registry.db
 interview/src/dsutils/__pycache__/
 machine_learning/FashionMNIST
 interview/data/
+mlartifacts/
+mlruns/
+interview/DataCo/
+interview/.env
 machine_learning/cyber_security/data
 interview/.cache.sqlite
 llm/audioabrahamlincolnmystic_2_grierson_64kb.mp3
 .env
-llm/named_entity_recognition/tokens_secrets
+node_modules/
+.next/
+.env
+.env.local
+.DS_Store
