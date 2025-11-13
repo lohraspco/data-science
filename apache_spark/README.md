@@ -20,10 +20,10 @@ Here is the process:
 While I was preparing for Databricks Certified Associate Developer for Apache exam, I found some information and links. Here are some of list of topics assessed in the exam by each category and some links:
 
 ## Spark Architecture — Conceptual
-- Driver: The process that runs the main() function of your Spark application, coordinates tasks, and manages the execution plan.
-- Executors: Worker processes that execute tasks assigned by the driver and store data in memory or disk.
-- Cluster Manager: The system responsible for allocating resources (e.g., CPU, memory) to Spark applications (e.g., YARN, Mesos, Standalone, Kubernetes).
-- Cluster architecture: nodes, drivers, workers, executors, slots(parallel capacity on executor).
+- **Driver**: The process that runs the main() function of your Spark application, coordinates tasks, and manages the execution plan.
+- **Executors**: Worker processes that execute tasks assigned by the driver and store data in memory or disk.
+- **Cluster Manager**: The system responsible for allocating resources (e.g., CPU, memory) to Spark applications (e.g., YARN, Mesos, Standalone, Kubernetes).
+- **Cluster architecture**: nodes, drivers, workers, executors, slots(parallel capacity on executor).
   
   Spark execution hierarchy: 
     - **applications**: The actual Spark job(s) that you run, which begins by instantiating a SparkSession that manages its SparkContext. It interacts with the driver and cluster manager to execute.

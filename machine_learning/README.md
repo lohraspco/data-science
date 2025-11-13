@@ -1,4 +1,30 @@
-# Python codes
+#  machine learning landscape
+```text
+Machine Learning
+│
+├── Supervised Learning
+│   ├── Discriminative Models
+│   │   ├── Linear/Logistic Regression
+│   │   ├── SVM, XGBoost, Random Forest
+│   │   └── Deep Neural Nets
+│   │
+│   └── Generative Models (Probabilistic)
+│       ├── Gaussian Processes
+│       ├── Naive Bayes
+│       ├── Bayesian Linear/Logistic Regression
+│       └── **Hierarchical Bayes**
+│
+├── Unsupervised Learning
+│   ├── Clustering (K-Means, GMM)
+│   ├── Topic Models (LDA = Hierarchical Bayes!)
+│   └── Bayesian Mixture Models
+│
+└── Reinforcement Learning
+    └── Bayesian RL (less common)
+```
+
+
+# ML Life Cycle
 
 The Machine Learning (ML) lifecycle is a set of steps that guide the development and deployment of machine learning models. It includes the following phases:
 
