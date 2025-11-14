@@ -66,3 +66,4 @@ node_modules/
 .env
 .env.local
 .DS_Store
+llm/named_entity_recognition/tokens_secrets
